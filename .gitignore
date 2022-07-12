@@ -107,3 +107,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Live Sass Compiler files
+src/sass/*.css
+src/sass/*.map
