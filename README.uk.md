@@ -1,5 +1,7 @@
 **Read in other languages: [Русский](README.md), [Polski](README.pl.md).**
 
+[Макет](<https://www.figma.com/file/q1ByTQ3xVmyaC2wphwAeRs/IceCream-(Copy)-(Copy)-(Copy)>)
+
 # Parcel template
 
 Этот проект был создан при помощи Parcel. Для знакомства и настройки
