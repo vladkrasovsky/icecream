@@ -1,3 +1,6 @@
 body {
+  @include font();
+  font-family: $font-stack;
+  color: $color-text;
   background-color: $bg-body;
 }
