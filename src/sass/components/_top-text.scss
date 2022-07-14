@@ -1,0 +1,11 @@
+.top-text {
+    @include font(18px, 1.17, 400, 0.04em);
+    font-style: $font-stack-secondary;
+    text-transform: uppercase;
+    @include mq(tablet) {
+        @include font(26px, 1.15, 400, 0.04em);
+    }
+    @include mq(desktop) {
+        @include font(30px, 1.13, 400, 0.04em);
+    }
+}

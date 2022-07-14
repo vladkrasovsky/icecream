@@ -1,0 +1,11 @@
+.title {
+    @include font(34px, 1.15, 400, 0.04em);
+    font-style: $font-stack-secondary;
+    text-transform: uppercase;
+    @include mq(tablet) {
+        @include font(48px, 1.14, 400, 0.04em);
+    }
+    @include mq(desktop) {
+        @include font(58px, 1.14, 400, 0.06em);
+    }
+}
