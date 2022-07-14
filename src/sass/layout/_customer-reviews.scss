@@ -1,0 +1,18 @@
+.customer-reiews__logo {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.customer-reiews__quote {
+  width: 280px;
+  height: 308px;
+}
+
+.customer-reiews__text {
+  font-family: $font-stack;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.58;
+  text-align: center;
+}
