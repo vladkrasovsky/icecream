@@ -1,13 +1,13 @@
 // GENERAL CSS SETTINGS
 
-// ::placeholder {
-//   color: $color-text-light;
-// }
+::placeholder {
+  color: $color-text-light;
+}
 
-// ::selection {
-//   background-color: $color-accent;
-//   color: $color-text-lightest;
-// }
+::selection {
+  background-color: $color-accent;
+  color: $color-text-lighter;
+}
 
 p,
 h1,
