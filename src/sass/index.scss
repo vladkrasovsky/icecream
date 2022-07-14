@@ -1,2 +1,18 @@
 @import './common';
-@import './example';
+
+// components section
+@import './components/btn';
+@import './components/container';
+@import './components/title';
+@import './components/top-text';
+
+// layout section
+@import './layout/header';
+@import './layout/hero';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';

@@ -1,0 +1,32 @@
+// Main Colors
+$color-accent: #d41443;
+$color-accent-dark: mix(black, $color-accent, 15%); // Dark accent color
+
+$color-secondary-darker: #e17992;
+$color-secondary-dark: #fea5bb;
+$color-secondary: #ffa5ba;
+$color-secondary-light: #ffb8ca;
+$color-secondary-lighter: #fff5f6;
+
+$color-coffee: #f0d1a5;
+$color-milkshakes: #c2e297;
+
+// Texts
+$color-text: #000000;
+$color-text-light: #907e82;
+$color-text-lighter: #ffffff;
+
+// Borders
+$color-border: #e1e1e1;
+$color-border-secondary: #e18298;
+
+// Backgrounds
+$bg-body: #ffffff;
+
+$bg-customer-sliders: #fafafa;
+$bg-customer-markers: #d9d9d9;
+
+$bg-button: $color-accent;
+$bg-button-active: $color-accent-dark;
+$bg-button-secondary: #ffffff;
+$bg-button-secondary-active: #ecebeb;
