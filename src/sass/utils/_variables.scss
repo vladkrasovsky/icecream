@@ -36,3 +36,7 @@ $font-stack: 'DM Sans', sans-serif; // User Font Family
 $font-stack-secondary: 'Titan One', cursive; // Headers Font Family
 $font-size: 16px; // Body Font Size
 $line-height: 1.76; // Document Line Height
+
+// Transitions
+$transition-duration: 250ms;
+$transition-animation: cubic-bezier(0.4, 0, 0.2, 1);
