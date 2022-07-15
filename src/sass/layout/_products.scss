@@ -1,0 +1,144 @@
+.products__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+
+.products__top-text {
+    margin-bottom: 15px;
+
+    text-align: center;
+}
+
+.products__title {
+    margin-bottom: 140px;
+
+    text-align: center;
+}
+
+.products__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.products__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 280px;
+    width: 100%;
+    min-height: 489px;
+
+    padding: 160px 39px 40px 41px;
+
+    border-radius: 24px;
+
+    &:not(:last-child) {
+        margin-bottom: 140px;
+    }
+}
+
+// npm start
+
+.products__item--first {
+    background-color: $color-secondary-light;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: -140px;
+        left: auto;
+
+        width: 280px;
+        height: 280px;
+
+        background-image: url(../images/products/ice-desk.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;  
+    }
+}
+
+.products__item--second {
+    background-color: $color-coffee;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -140px;
+        left: auto;
+
+        width: 280px;
+        height: 280px;
+
+        background-image: url(../images/products/shake-desk.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+   }
+}
+
+.products__item--third {
+    background-color: #c2e297;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -136px;
+        left: auto;
+
+        width: 280px;
+        height: 280px;
+
+        background-image: url(../images/products/shoko-desk.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+    }
+}
+
+.products__item-title {
+
+    margin-top: 20px;
+    
+    font-size: 20px;
+    text-align: center;
+}
+
+.products-icon {
+    margin: 32px auto;
+    fill: $color-text-lighter;
+}
+
+
+.products__text {
+    @include font(14px, 1.52, 700, null);
+
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    color: $color-text-lighter;
+
+    &::after {
+        content: '';
+        margin-top: 32px;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(../images/products/arrow-right.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
