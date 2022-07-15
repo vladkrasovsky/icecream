@@ -36,11 +36,19 @@
     display: flex;
     margin-top: 40px;
   }
+  @include mq(desktop) {
+    align-items: center;
+    margin-top: 60px;
+  }
 }
 
 .about__picture {
   @include mq(tablet) {
     margin-right: 32px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 100px;
   }
 }
 
@@ -51,6 +59,10 @@
 
   @include mq(tablet) {
     max-width: 334px;
+  }
+
+  @include mq(desktop) {
+    max-width: 463px;
   }
 }
 
@@ -69,6 +81,10 @@
     font-size: 14px;
     line-height: 176%;
   }
+
+  @include mq(desktop) {
+    font-size: 16px;
+  }
 }
 
 .about__second-text,
@@ -86,6 +102,11 @@
     font-size: 14px;
     line-height: 176%;
     margin-top: 20px;
+  }
+
+  @include mq(desktop) {
+    font-size: 16px;
+    margin-top: 32px;
   }
 }
 
