@@ -1,90 +1,42 @@
-// Reset
-
-a {
-    text-decoration: none;
-  }
-
-  // Variables
-
-$mobile: 320px;
-$tablet: 767px;
-$desktop: 768px;
-
-$breakpoints: (
-  'mobile': (
-    max-width: $mobile,
-  ),
-  'tablet': (
-    max-width: $tablet,
-  ),
-  'desktop': (
-    min-width: $desktop,
-  ),
-) !default;
-
-//  Styles
-
 .header {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
   
-    // .header__container
-  
-    &__container {
-      padding-left: 20px;
-      padding-right: 20px;
-  
-      margin-left: auto;
-      margin-right: auto;
-  
-      // @include respond-to('mobile') {
-      //   width: $mobile;
-      // }
-  
-      // @include respond-to('tablet') {
-      //   width: $tablet;
-      // }
-  
-      // @include respond-to('desktop') {
-      //   width: $desktop;
-      // }
-    }
-  
     // .header__mdl
   
     &__mdl {
-display: block;
+      display: block;
       margin-top: 60px;
       margin-bottom: 19px;
       margin-left: auto;
       margin-right: auto;
       padding: 0;
       width: 209px;
-  height: 44px;
+      height: 44px;
   
-  background: $bg-body;
-  border-radius: 22px;
-  border: none;
-  
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  align-items: center;
-  text-align: center;
-  
-  color: $color-accent;
-  
-  &:hover,
-  &:focus{
-    background-color: $color-accent;
-    color: $color-text-lighter;
-    .header__mdl--arrow{
-        fill:$bg-body;
-    }
+      background: $bg-body;
+      border-radius: 22px;
+      border: none;
+
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      align-items: center;
+      text-align: center;
+
+      color: $color-accent;
+
+      &:hover,
+      &:focus{
+        background-color: $color-accent;
+        color: $color-text-lighter;
+        .header__mdl--arrow{
+            fill:$bg-body;
+      }
   }
   
   &--env{
