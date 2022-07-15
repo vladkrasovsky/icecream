@@ -16,7 +16,7 @@
 
       <button
         type="button"
-        class="button nav__button"
+        class="nav__button"
         aria-expanded="false"
         aria-controls="site-nav__menu"
         data-menu-button
@@ -50,6 +50,13 @@
 
     <!-- Buy now Modal Button -->
 
-    <button type="button" class="button header__mdl btn">Buy now</button>
+    <button type="button" class="button header__mdl">
+      <span class="header__mdl--env">Buy now</span>
+    <span class="header__mdl--thumb">
+      <svg class="header__mdl--arrow">
+        <use href="/src/images/icons.svg#arrow-right"></use>
+      </svg>
+    </span> 
+  </button>
   </div>
 </header>
