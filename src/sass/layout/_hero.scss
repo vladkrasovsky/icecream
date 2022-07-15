@@ -1,0 +1,13 @@
+.hero {
+  background-color: $color-secondary-light;
+}
+.hero-content {
+  &__item {
+    @extend %list;
+  }
+}
+.achiv {
+  &__item {
+    @extend %list;
+  }
+}
