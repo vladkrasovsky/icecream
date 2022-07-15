@@ -1,21 +1,30 @@
 <section class="hero">
   <div class="container hero__container">
     <div class="hero-content">
-      <h1 class="top-text top-text--light top-text--large">
-        ice cream made with <span class="title">passion</span>
-      </h1>
-      <ul class="hero-content__menu">
-        <li class="hero-content__item">
-          <a href="#our_products" class="btn"
-            ><span class="btn__text">Products</span></a
-          >
-        </li>
-        <li class="hero-content__item">
-          <a href="#how_it_is_made" class="btn btn--secondary"
-            ><span class="btn__text">How it’s made?</span></a
-          >
-        </li>
-      </ul>
+      <div class="hero-content__block">
+        <h1
+          class="hero-content__top-text top-text top-text--light top-text--large"
+        >
+          ice cream made with <span class="title">passion</span>
+        </h1>
+        <ul class="hero-content__menu">
+          <li class="hero-content__item">
+            <a
+              href="#our_products"
+              class="hero-content__btn hero-content__btn--colored"
+              ><span class="btn__text">Products</span></a
+            >
+          </li>
+          <li class="hero-content__item">
+            <a
+              href="#how_it_is_made"
+              class="hero-content__btn hero-content__btn--uncolored"
+              ><span class="btn__text">How it’s made?</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="hero-content__circle hero-content__circle--top"></div>
       <img
         class="hero-content__icon"
         srcset="
@@ -26,62 +35,64 @@
           ./images/hero/icecream-desk.png    236w,
           ./images/hero/icecream-desk@2x.png 472w
         "
-        sizes="(min-width: 1200px) 236px, (min-width: 768px) 143px"
-        src="./images/hero/icecream-tab.png"
+        sizes="(min-width: 1200px) 236px, (min-width: 768px) 143px, 100vw"
+        src="./images/hero/icecream-mob.png"
         alt="big ice cream"
       />
     </div>
-    <div class="hero-slider">
-      <img
-        class="hero-slider__icon"
-        srcset="
-          ./images/hero/milk-tab.png     152w,
-          ./images/hero/milk-tab@2x.png  304w,
-          ./images/hero/milk-desk.png    213w,
-          ./images/hero/milk-desk@2x.png 426w
-        "
-        sizes="(min-width: 1200px) 213px, (min-width: 768px) 152px"
-        src="./images/hero/milk-tab.png"
-        alt="carafe of milk"
-      />
-      <p class="hero-slider__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et
-      </p>
-      <div class="slider-hidden">
-        <button class="slider-hidden__button" type="button">
-          <img
-            class="slider-hidden__icon"
-            src="./images/hero/arrow-right-desk.png"
-            alt="Arrow Button"
-          />
-        </button>
-        <p class="slider-hidden__text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit
+    <div class="hero-other">
+      <div class="hero-slider">
+        <img
+          class="hero-slider__icon"
+          srcset="
+            ./images/hero/milk-tab.png     152w,
+            ./images/hero/milk-tab@2x.png  304w,
+            ./images/hero/milk-desk.png    213w,
+            ./images/hero/milk-desk@2x.png 426w
+          "
+          sizes="(min-width: 1200px) 213px, (min-width: 768px) 152px"
+          src="./images/hero/milk-tab.png"
+          alt="carafe of milk"
+        />
+        <p class="hero-slider__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
         </p>
+        <div class="slider-hidden">
+          <button class="slider-hidden__button" type="button">
+            <img
+              class="slider-hidden__icon"
+              src="./images/hero/arrow-right-desk.png"
+              alt="Arrow Button"
+            />
+          </button>
+          <p class="slider-hidden__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit
+          </p>
+        </div>
       </div>
+      <ul class="achiv">
+        <li class="achiv__item">
+          <p class="achiv__number">16</p>
+          <p class="achiv__text">cafes</p>
+        </li>
+        <li class="achiv__item">
+          <p class="achiv__number">23</p>
+          <p class="achiv__text">food trucks</p>
+        </li>
+      </ul>
+      <img
+        class="hero-testy"
+        srcset="
+          ./images/hero/sotasty-tab.png     190w,
+          ./images/hero/sotasty-tab@2x.png  380w,
+          ./images/hero/sotasty-desk.png    304w,
+          ./images/hero/sotasty-desk@2x.png 608w
+        "
+        sizes="(min-width: 1200px) 304px, (min-width: 768px) 190px"
+        src="./images/hero/sotasty-tab.png"
+        alt="a person eats ice cream and says so tasty!"
+      />
     </div>
-    <ul class="achiv">
-      <li class="achiv__item">
-        <p class="achiv__number">16</p>
-        <p class="achiv__text">cafes</p>
-      </li>
-      <li class="achiv__item">
-        <p class="achiv__number">23</p>
-        <p class="achiv__text">food trucks</p>
-      </li>
-    </ul>
-    <img
-      class="hero-testy__icon"
-      srcset="
-        ./images/hero/sotasty-tab.png     190w,
-        ./images/hero/sotasty-tab@2x.png  380w,
-        ./images/hero/sotasty-desk.png    304w,
-        ./images/hero/sotasty-desk@2x.png 608w
-      "
-      sizes="(min-width: 1200px) 304px, (min-width: 768px) 190px"
-      src="./images/hero/sotasty-tab.png"
-      alt="a person eats ice cream and says so tasty!"
-    />
   </div>
 </section>
