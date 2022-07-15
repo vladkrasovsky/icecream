@@ -1,0 +1,30 @@
+.top-text {
+  @include font(18px, 1.17, 400, 0.04em);
+  font-family: $font-stack-secondary;
+  text-transform: uppercase;
+  color: $color-secondary;
+
+  @include mq(tablet) {
+    @include font(26px, 1.15, 400, 0.04em);
+  }
+
+  @include mq(desktop) {
+    @include font(30px, 1.13, 400, 0.04em);
+  }
+}
+
+.top-text--light {
+  color: $color-text-lighter;
+}
+
+.top-text--large {
+  font-size: 26px;
+
+  @include mq(tablet) {
+    font-size: 22px;
+  }
+
+  @include mq(desktop) {
+    font-size: 38px;
+  }
+}
