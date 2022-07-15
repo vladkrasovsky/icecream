@@ -55,11 +55,7 @@ $breakpoints: (
     // .header__mdl
   
     &__mdl {
-        // position: absolute;
-        // top: 0;
-        // left: 50%;
-        // transform: translateX(-50%);
-
+display: block;
       margin-top: 60px;
       margin-bottom: 19px;
       margin-left: auto;
@@ -70,6 +66,7 @@ $breakpoints: (
   
   background: $bg-body;
   border-radius: 22px;
+  border: none;
   
   font-family: 'DM Sans';
   font-style: normal;
@@ -81,7 +78,6 @@ $breakpoints: (
   
   color: $color-accent;
   
-  
   &:hover,
   &:focus{
     background-color: $color-accent;
@@ -92,8 +88,6 @@ $breakpoints: (
   }
   
   &--env{
-    outline: 1px solid blue;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -104,20 +98,8 @@ $breakpoints: (
   }
   &--thmb{
     margin-left: 16px;
+
   }
-//   &::after {
-//     content: "";
-//     width: 6px;
-//     height: 8px;
-//     margin-left: 16px;
-  
-//     background-color: transparent;
-//       background-image: url('/img/svg/vector.svg');
-//       border: none;
-//       background-repeat: no-repeat;
-//       background-position: center;
-  
-//   }
 &--arrow{
     color:$color-accent;
     fill:currentColor;
@@ -153,7 +135,6 @@ $breakpoints: (
       &--close {
         display: none;
       }
-      // transition: fill 250ms $timing-func;
     }
   
     // .nav__button
@@ -198,7 +179,6 @@ $breakpoints: (
   
       &.is-open {
         display: block;
-        // padding: 0;
         width: 100vw;
         height: 100vh;
         background-color: $color-secondary-darker;
