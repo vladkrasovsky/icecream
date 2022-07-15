@@ -1,28 +1,43 @@
 .about {
-    background-color: $color-secondary-lighter;
-    background-image: url(../images/about/milk-bg-mob.png);
-        background-repeat: no-repeat;
-            background-size: contain;
+  background-color: $color-secondary-lighter;
+  background-image: url(../images/about/milk-bg-mob.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 560px;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.about__title {
+  margin-top: 15px;
+}
+
+.about__picture {
+  margin-top: 32px;
 }
 
 .about__first-text {
-    margin-top: 40px;
+  margin-top: 40px;
+  padding-right: 80px;
 
-font-weight: 500;
-    font-size: 12px;
-    line-height: 162%;
-    color: $color-text;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+  color: $color-text;
 }
 
-.about__second-text, .about__third-text {
-margin-top: 25px;
+.about__second-text,
+.about__third-text {
+  margin-top: 25px;
+  padding-right: 80px;
 
-font-weight: 500;
-    font-size: 12px;
-    line-height: 162%;
-    color: $color-text-light;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+  color: $color-text-light;
 }
 
 .about__btn {
-    margin-top: 20px;
+  margin-top: 20px;
 }
