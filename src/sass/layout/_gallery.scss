@@ -1,6 +1,33 @@
+.gallery {
+  background-image: linear-gradient(
+    to bottom,
+    $color-secondary-lighter 30%,
+    transparent 30%
+  );
+  padding-top: 20px;
+}
+
 .gallery__list {
   display: flex;
   list-style: none;
+  margin-top: -2px;
+  margin-left: -2px;
+}
+
+.gallery__item {
+  margin-right: 2px;
+}
+
+.gallery__pic {
+  display: block;
+}
+
+.gallery__pic--margin {
+  margin-bottom: 2px;
+}
+
+.gallery__pic-5 {
+  width: 50%;
 }
 
 .gallery__item {
