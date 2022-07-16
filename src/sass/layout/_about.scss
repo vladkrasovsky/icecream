@@ -1,9 +1,8 @@
 .about {
   background-color: $color-secondary-lighter;
 
-  // temporary
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 
   @include mq(mobile) {
     background-image: url(../images/about/milk-bg-mob.png);
@@ -95,4 +94,8 @@
   @include mq(tablet) {
     margin-top: 40px;
   }
+}
+
+.btn__icon {
+  fill: currentColor;
 }
