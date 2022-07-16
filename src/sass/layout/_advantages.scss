@@ -1,10 +1,5 @@
 .advantages {
     background-color: $color-secondary-lighter;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    @include mq (tablet) {
-        padding-top: 30px;
-    }
 }
 .advantages__list {
     @extend %list;
@@ -13,11 +8,6 @@
     gap: 32px;
 }
 .advantages__item {
-    @include mq (tablet) {
-        display: block;
-        width: 170px;
-    }
-
     &::before {
         display: block;
         content: " ";
@@ -26,32 +16,34 @@
         background-size: contain;
         background-repeat: no-repeat;
         margin-bottom: 16px;
-        @include mq (tablet) {
-            margin-bottom: 36px;
-        }
     }
-
 }
 .advantages__item--milk {
     &::before {
         background-image: url('../images/advantages/milkbacket.png');
-        @include mq (retina) {
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
             background-image: url('../images/advantages/milkbacket@2x.png');
         }
     }
 }
 .advantages__item--apples {
     &::before {
-        background-image: url('../images/advantages/apples.png');
-        @include mq (retina) {
-            background-image: url('../images/advantages/apples@x2.png');
+        background-image: url('../images/advantages/apples@x2.png');
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url('../images/advantages/apples.png');
         }
     }
 }
 .advantages__item--heart {
     &::before {
         background-image: url('../images/advantages/heart.png');
-        @include mq (retina) {
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
             background-image: url('../images/advantages/heart@2x.png');
         }
     }
@@ -63,16 +55,8 @@
     color: $color-accent;
     margin-bottom: 4px;
     height: 56px;
-    @include mq (tablet) {
-        @include font(48px, 1.15, 400, 0.04em);
-        text-transform: none;
-        margin-bottom: 13px;
-    }
 }
 .advantages__discription {
     @include font(12px, 1.7, 700, 0.04em);
     font-family: $font-stack;
-    @include mq (tablet) {
-        font-size: 14px;
-    }
 }
