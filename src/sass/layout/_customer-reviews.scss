@@ -1,0 +1,99 @@
+.customer-reiews {
+  padding-bottom: 60px;
+}
+
+.customer-reiews__logo {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.customer-reiews__quote {
+  width: 280px;
+  height: 308px;
+  margin-bottom: 16px;
+}
+
+.customer-reiews__text {
+  font-family: $font-stack;
+  width: 180px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.58;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    $bg-customer-sliders,
+    $bg-customer-sliders 31px,
+    $color-border 32px,
+    $color-border 32px
+  );
+}
+
+.customer-reiews__quote {
+  padding-top: 43px;
+  background-color: $bg-customer-sliders;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots-list {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.dots-item:not(last-child) {
+  margin-right: 10px;
+}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: $bg-customer-reviews-dots;
+}
+
+.customer-reiews__name {
+  text-align: center;
+}
+
+.slick-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.slick-slide::before {
+}
+
+.slick-switchers-list {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: baseline;
+}
+
+.slick-switchers__icon {
+  width: 12px;
+  height: 12px;
+  fill: $bg-customer-reviews-house;
+}
+
+.slick-switchers-circle {
+  background-color: $bg-customer-markers;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.slick-switchers-item:not(last-child) {
+  margin-right: 18px;
+}

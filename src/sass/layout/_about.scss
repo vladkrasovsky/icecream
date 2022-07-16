@@ -3,19 +3,18 @@
 
   // temporary
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 
   @include mq(mobile-only) {
     background-image: url(../images/about/milk-bg-mob.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 0 560px;
+    background-position: 0 594px;
 
     @include mq(retina) {
       background-image: url(../images/about/milk-bg-mob@2x.png);
     }
   }
-
   @include mq(desktop) {
     background-image: url(../images/about/milk-bg-desk.png);
     background-repeat: no-repeat;
@@ -33,11 +32,11 @@
 }
 
 .about__top-text {
-  @include centeredFlex($type: flex);
+  text-align: center;
 }
 
 .about__title {
-  @include centeredFlex($type: flex);
+  text-align: center;
   margin-top: 15px;
 }
 
@@ -77,6 +76,12 @@
   }
 }
 
+.about__content {
+  @include mq(mobile-only) {
+    padding-right: 60px;
+  }
+}
+
 .about__first-text {
   font-weight: 500;
   letter-spacing: 0.04em;
@@ -104,7 +109,7 @@
   color: $color-text-light;
   letter-spacing: 0.04em;
 
-  @include mq(mobile) {
+  @include mq(mobile-only) {
     margin-top: 25px;
     font-size: 12px;
     line-height: 162%;
@@ -128,6 +133,10 @@
   @include mq(tablet) {
     margin-top: 40px;
   }
+}
+
+.btn__icon {
+  fill: currentColor;
 }
 
 .btn__icon {
