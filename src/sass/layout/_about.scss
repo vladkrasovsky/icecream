@@ -28,6 +28,26 @@
 
 .about__flex {
   margin-top: 32px;
+  @include mq(tablet) {
+    display: flex;
+    margin-top: 40px;
+  }
+}
+
+.about__picture {
+  @include mq(tablet) {
+    margin-right: 32px;
+  }
+}
+
+.about__content {
+  @include mq(mobile-only) {
+    padding-right: 60px;
+  }
+
+  @include mq(tablet) {
+    max-width: 334px;
+  }
 }
 
 .about__content {
@@ -46,6 +66,11 @@
     line-height: 162%;
     margin-top: 40px;
   }
+
+  @include mq(tablet) {
+    font-size: 14px;
+    line-height: 176%;
+  }
 }
 
 .about__second-text,
@@ -58,10 +83,24 @@
     font-size: 12px;
     line-height: 162%;
   }
+
+  @include mq(tablet) {
+    font-size: 14px;
+    line-height: 176%;
+    margin-top: 20px;
+  }
 }
 
 .about__btn {
   margin-top: 20px;
+
+  @include mq(tablet) {
+    margin-top: 40px;
+  }
+}
+
+.btn__icon {
+  fill: currentColor;
 }
 
 .btn__icon {
