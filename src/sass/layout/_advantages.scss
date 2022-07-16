@@ -26,10 +26,11 @@
         background-size: contain;
         background-repeat: no-repeat;
         margin-bottom: 16px;
+        @include mq (tablet) {
+            margin-bottom: 36px;
+        }
     }
-    @include mq (tablet) {
-        margin-bottom: 36px;
-    }
+
 }
 .advantages__item--milk {
     &::before {
@@ -41,9 +42,9 @@
 }
 .advantages__item--apples {
     &::before {
-        background-image: url('../images/advantages/apples@x2.png');
+        background-image: url('../images/advantages/apples.png');
         @include mq (retina) {
-            background-image: url('../images/advantages/apples.png');
+            background-image: url('../images/advantages/apples@x2.png');
         }
     }
 }
@@ -72,6 +73,6 @@
     @include font(12px, 1.7, 700, 0.04em);
     font-family: $font-stack;
     @include mq (tablet) {
-        @include font(14px, 1.7, 700, 0.04em);
+        font-size: 14px;
     }
 }
