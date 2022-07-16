@@ -29,7 +29,7 @@
 .advantages__item--milk {
     &::before {
         background-image: url('../images/advantages/milkbacket.png');
-        @include ($retina) {
+        @include mq (retina) {
             background-image: url('../images/advantages/milkbacket@2x.png');
         }
     }
@@ -37,7 +37,7 @@
 .advantages__item--apples {
     &::before {
         background-image: url('../images/advantages/apples@x2.png');
-        @include ($retina) {
+        @include mq (retina) {
             background-image: url('../images/advantages/apples.png');
         }
     }
@@ -45,7 +45,7 @@
 .advantages__item--heart {
     &::before {
         background-image: url('../images/advantages/heart.png');
-        @include ($retina) {
+        @include mq (retina) {
             background-image: url('../images/advantages/heart@2x.png');
         }
     }
