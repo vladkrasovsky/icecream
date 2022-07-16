@@ -60,10 +60,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         display: block;
-        
-        @media screen and (min-device-pixel-ratio: 2),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
+
+        @include mq(retina) {
             background-image: url(../images/products/ice-mob@2x.png);
         }
     }
@@ -87,9 +85,7 @@
         background-size: cover;
         display: block;
 
-        @media screen and (min-device-pixel-ratio: 2),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
+        @include mq(retina) {
             background-image: url(../images/products/shake-mob@2x.png);
         }
     }
@@ -113,9 +109,7 @@
         background-size: cover;
         display: block;
 
-        @media screen and (min-device-pixel-ratio: 2),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
+        @include mq(retina) {
             background-image: url(../images/products/shoko-mob@2x.png);
         }
     }    
@@ -156,9 +150,7 @@
         width: 40px;
         height: 40px;
 
-        @media screen and (min-device-pixel-ratio: 2),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
+        @include mq(retina) {
             background-image: url(../images/products/arrow-right@2x.png);
         }
     }
