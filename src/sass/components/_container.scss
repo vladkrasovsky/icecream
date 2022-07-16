@@ -6,8 +6,6 @@
   margin-left: auto;
   margin-right: auto;
 
-  overflow-x: hidden;
-
   @include mq(tablet) {
     $padding-tablet: 32px;
 
