@@ -15,6 +15,20 @@
       background-image: url(../images/about/milk-bg-mob@2x.png);
     }
   }
+  @include mq(desktop) {
+    background-image: url(../images/about/milk-bg-desk.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 236px;
+
+    @include mq(retina) {
+      background-image: url(../images/about/milk-bg-desk@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 1680px) {
+    background-size: cover;
+  }
 }
 
 .about__top-text {
@@ -32,11 +46,18 @@
     display: flex;
     margin-top: 40px;
   }
+  @include mq(desktop) {
+    margin-top: 60px;
+  }
 }
 
 .about__picture {
   @include mq(tablet) {
     margin-right: 32px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 100px;
   }
 }
 
@@ -48,6 +69,11 @@
   @include mq(tablet) {
     max-width: 334px;
   }
+
+  @include mq(desktop) {
+    max-width: 463px;
+    padding-top: 90px;
+  }
 }
 
 .about__content {
@@ -58,7 +84,7 @@
 
 .about__first-text {
   font-weight: 500;
-
+  letter-spacing: 0.04em;
   color: $color-text;
 
   @include mq(mobile-only) {
@@ -71,12 +97,17 @@
     font-size: 14px;
     line-height: 176%;
   }
+
+  @include mq(desktop) {
+    font-size: 16px;
+  }
 }
 
 .about__second-text,
 .about__third-text {
   font-weight: 500;
   color: $color-text-light;
+  letter-spacing: 0.04em;
 
   @include mq(mobile-only) {
     margin-top: 25px;
@@ -88,6 +119,11 @@
     font-size: 14px;
     line-height: 176%;
     margin-top: 20px;
+  }
+
+  @include mq(desktop) {
+    line-height: 194%;
+    margin-top: 32px;
   }
 }
 
