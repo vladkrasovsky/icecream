@@ -1,11 +1,11 @@
 .header {
     position: fixed;
+    z-index: 2;
     width: 100%;
     top: 0;
     left: 0;
+    background-color: $color-secondary-light;
   
-<<<<<<< Updated upstream
-=======
     // .header__container
   
     &__container {
@@ -38,7 +38,6 @@
       // }
     }
   
->>>>>>> Stashed changes
     // .header__mdl
   
     &__mdl {
