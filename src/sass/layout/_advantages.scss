@@ -20,31 +20,31 @@
 }
 .advantages__item--milk {
     &::before {
-        background-image: url(/src/images/advantages/milkbacket.png);
+        background-image: url('../images/advantages/milkbacket.png');
         @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-            background-image: url(/src/images/advantages/milkbacket@2x.png);
+            background-image: url('../images/advantages/milkbacket@2x.png');
         }
     }
 }
 .advantages__item--apples {
     &::before {
-        background-image: url(/src/images/advantages/apples.png);
+        background-image: url('../images/advantages/apples@x2.png');
         @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-            background-image: url(/src/images/advantages/apples@2x.png);
+            background-image: url('../images/advantages/apples.png');
         }
     }
 }
 .advantages__item--heart {
     &::before {
-        background-image: url(/src/images/advantages/heart.png);
+        background-image: url('../images/advantages/heart.png');
         @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-            background-image: url(/src/images/advantages/heart@2x.png);
+            background-image: url('../images/advantages/heart@2x.png');
         }
     }
 }
