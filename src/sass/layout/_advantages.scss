@@ -1,5 +1,10 @@
 .advantages {
     background-color: $color-secondary-lighter;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    @include mq (tablet) {
+        padding-top: 30px;
+    }
 }
 .advantages__list {
     @extend %list;
