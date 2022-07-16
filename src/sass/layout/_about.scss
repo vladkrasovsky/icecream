@@ -1,0 +1,69 @@
+.about {
+  background-color: $color-secondary-lighter;
+
+  // temporary
+  padding-top: 60px;
+  padding-bottom: 20px;
+
+  @include mq(mobile-only) {
+    background-image: url(../images/about/milk-bg-mob.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 594px;
+
+    @include mq(retina) {
+      background-image: url(../images/about/milk-bg-mob@2x.png);
+    }
+  }
+}
+
+.about__top-text {
+  text-align: center;
+}
+
+.about__title {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.about__flex {
+  margin-top: 32px;
+}
+
+.about__content {
+  @include mq(mobile-only) {
+    padding-right: 60px;
+  }
+}
+
+.about__first-text {
+  font-weight: 500;
+
+  color: $color-text;
+
+  @include mq(mobile-only) {
+    font-size: 12px;
+    line-height: 162%;
+    margin-top: 40px;
+  }
+}
+
+.about__second-text,
+.about__third-text {
+  font-weight: 500;
+  color: $color-text-light;
+
+  @include mq(mobile-only) {
+    margin-top: 25px;
+    font-size: 12px;
+    line-height: 162%;
+  }
+}
+
+.about__btn {
+  margin-top: 20px;
+}
+
+.btn__icon {
+  fill: currentColor;
+}
