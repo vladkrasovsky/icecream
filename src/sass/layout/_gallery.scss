@@ -4,10 +4,17 @@
 .gallery {
   background-image: linear-gradient(
     to bottom,
-    $color-secondary-lighter 30%,
-    transparent 30%
+    $color-secondary-lighter 45%,
+    transparent 45%
   );
   padding-top: 20px;
+  @include mq(tablet) {
+    background-image: linear-gradient(
+      to bottom,
+      $color-secondary-lighter 30%,
+      transparent 30%
+    );
+  }
 }
 
 .gallery__list {
