@@ -5,7 +5,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @include mq(mobile) {
+  @include mq(mobile-only) {
     background-image: url(../images/about/milk-bg-mob.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -16,8 +16,19 @@
     }
   }
 
-  @include mq(tablet) {
-    background-image: none;
+  @include mq(desktop) {
+    background-image: url(../images/about/milk-bg-desk.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 236px;
+
+    @include mq(retina) {
+      background-image: url(../images/about/milk-bg-desk@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 1680px) {
+    background-size: cover;
   }
 }
 
@@ -37,7 +48,6 @@
     margin-top: 40px;
   }
   @include mq(desktop) {
-    align-items: center;
     margin-top: 60px;
   }
 }
@@ -63,12 +73,13 @@
 
   @include mq(desktop) {
     max-width: 463px;
+    padding-top: 90px;
   }
 }
 
 .about__first-text {
   font-weight: 500;
-
+  letter-spacing: 0.04em;
   color: $color-text;
 
   @include mq(mobile-only) {
@@ -91,6 +102,7 @@
 .about__third-text {
   font-weight: 500;
   color: $color-text-light;
+  letter-spacing: 0.04em;
 
   @include mq(mobile) {
     margin-top: 25px;
@@ -105,7 +117,7 @@
   }
 
   @include mq(desktop) {
-    font-size: 16px;
+    line-height: 194%;
     margin-top: 32px;
   }
 }
@@ -116,4 +128,8 @@
   @include mq(tablet) {
     margin-top: 40px;
   }
+}
+
+.btn__icon {
+  fill: currentColor;
 }
