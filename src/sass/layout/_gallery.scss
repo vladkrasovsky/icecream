@@ -1,3 +1,6 @@
+.gallery .container {
+}
+
 .gallery {
   background-image: linear-gradient(
     to bottom,
@@ -8,13 +11,13 @@
 }
 
 .gallery__list {
+  width: 100vw;
+  margin-left: -20px;
   display: flex;
   list-style: none;
-  margin-top: -2px;
-  margin-left: -2px;
 }
 
-.gallery__item {
+.gallery__item:not(:last-child) {
   margin-right: 2px;
 }
 
