@@ -87,7 +87,6 @@
     }
   }
   .nav {
-    outline:1px solid green;
     display: flex;
     flex-grow: 1;
     align-items: center;
@@ -135,17 +134,12 @@
   
        position: absolute;
        top: 0;
-       left: 0;
-
-@include mq(tablet) {
-    top: 0;
-    right: 0;
-}
+       right: 0;
      
   
       &.is-open {
         display: block;
-        width: 100vw;
+        width: 250px;
         height: 100vh;
 
     @include mq(tablet) {
