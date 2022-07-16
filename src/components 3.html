@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <include src="./partials/head-meta.html"></include>
+    <title>Project Components</title>
+    <style>
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 15px;
+      }
+      h2 {
+        display: inline-block;
+        margin-bottom: 20px;
+        background: #5e925e;
+      }
+      a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+      }
+      h2 > a {
+        padding: 0 15px;
+      }
+      p {
+        margin-bottom: 5px;
+        font-size: 15px;
+        color: #333;
+      }
+      pre {
+        padding: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        overflow: scroll;
+      }
+      section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 2px dashed gray;
+      }
+      .block {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .block > div > svg {
+        /* margin: 15px; */
+        height: 40px;
+      }
+      .block__item:first-child {
+        width: 50%;
+        padding-right: 50px;
+      }
+      .block__item:last-child {
+        max-width: 580px;
+      }
+      .block__item > h3 {
+        margin-top: 0;
+      }
+      .icon {
+        flex-basis: calc(25% - 15px);
+        padding-top: 15px;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid;
+      }
+      .icon p {
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #ffb8ca; color: #333">
+    <div class="container">
+      <h1>Project Components</h1>
+      <br />
+      <section>
+        <div class="block">
+          <div class="block__item">
+            <h2 id="titles"><a href="#titles"># Titles - .title</a></h2>
+            <p>Section accent title (h2):</p>
+            <div class="title title--accent">Lorem ipsum dolor sit</div>
+          </div>
+          <div class="block__item">
+            <h3>Example:</h3>
+            <pre>&lt;h2 class="title title"&gt;Section title&lt;/h2&gt;</pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="block">
+          <div class="block__item">
+            <h2 id="top-texts">
+              <a href="#top-texts"># Top Texts - .top-text</a>
+            </h2>
+
+            <p>Top text:</p>
+            <div class="top-text">Lorem ipsum dolor sit</div>
+
+            <p>Top text light large:</p>
+            <div class="top-text top-text--light top-text--large">
+              Lorem ipsum dolor sit
+            </div>
+          </div>
+          <div class="block__item">
+            <h3>Example:</h3>
+            <pre>&lt;p class="top-text"&gt;Top text&lt;/p&gt;</pre>
+            <pre>
+&lt;p class="top-text top-text--light top-text--large"&gt;Top text light large&lt;/p&gt;</pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="block">
+          <div class="block__item">
+            <h2 id="buttons"><a href="#buttons"># Buttons - .btn</a></h2>
+
+            <p>Default button with icon:</p>
+            <a href="" class="btn">
+              <span class="btn__text">.btn</span>
+              <svg class="btn__icon" width="6" height="10">
+                <use href="./images/icons.svg#arrow-right" />
+              </svg>
+            </a>
+
+            <p>Secondary button bold:</p>
+            <a href="" class="btn btn--secondary btn--bold">
+              <span class="btn__text">.btn .btn--secondary .btn--bold</span>
+            </a>
+
+            <p>Full width small button:</p>
+            <button class="btn btn--sm btn--100" type="button">
+              .btn .btn--sm .btn--100
+            </button>
+          </div>
+          <div class="block__item">
+            <h3>Example:</h3>
+            <pre>
+&lt;a href="" class="btn"&gt;
+  &lt;svg class="btn__icon" width="9" height="18"&gt;
+    &lt;use href="./images/icons.svg#arrow-right" /&gt;
+  &lt;/svg&gt;
+  &lt;span class="btn__text"&gt;Default button with icon&lt;/span&gt;
+&lt;/a&gt;</pre
+            >
+            <pre>
+&lt;a href="" class="btn btn-bold btn--secondary"&gt;
+  &lt;span class="btn__text"&gt;Secondary button bold&lt;/span&gt;
+&lt;/a&gt;</pre
+            >
+            <pre>
+&lt;a href="" class="btn btn--sm btn--100"&gt;
+  &lt;span class="btn__text"&gt;Full width small button&lt;/span&gt;
+&lt;/a&gt;</pre
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="block">
+          <div class="block__item">
+            <h2 id="icons">
+              <a href="#icons"># Icons - svg>use</a>
+            </h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px">
+              <div class="icon" style="flex-basis: calc(100% - 15px)">
+                <svg width="200" height="50">
+                  <use href="./images/icons.svg#logo" />
+                </svg>
+                <p>logo</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#house" />
+                </svg>
+                <p>house</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#advantage-01" />
+                </svg>
+                <p>advantage-01</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#advantage-02" />
+                </svg>
+                <p>advantage-02</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#advantage-03" />
+                </svg>
+                <p>advantage-03</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#arrow-right" />
+                </svg>
+                <p>arrow-right</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#quotes" />
+                </svg>
+                <p>quotes</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#burger" />
+                </svg>
+                <p>burger</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#close" />
+                </svg>
+                <p>close</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#facebook" />
+                </svg>
+                <p>facebook</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#github" />
+                </svg>
+                <p>github</p>
+              </div>
+
+              <div class="icon">
+                <svg width="50" height="50">
+                  <use href="./images/icons.svg#telegram" />
+                </svg>
+                <p>telegram</p>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <h3>Example:</h3>
+            <pre>
+&lt;svg width="50" height="50"&gt;
+  &lt;use href="./images/icons.svg#{name}"/&gt;
+&lt;/svg&gt;
+</pre
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
