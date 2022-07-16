@@ -1,0 +1,109 @@
+$circle-content-z: 0;
+$img-content-z: 2;
+$text-content-z: 3;
+
+.hero {
+  background-color: $color-secondary-light;
+  @include mq(mobile) {
+    overflow: hidden;
+  }
+  &__container {
+    position: relative;
+    min-height: 502px;
+  }
+}
+
+.hero-content {
+  &__block {
+    position: absolute;
+    bottom: 160px;
+    z-index: 1;
+  }
+  &__top-text {
+    max-width: 218px;
+    margin-bottom: 20px;
+  }
+  &__menu {
+    display: flex;
+  }
+  &__item {
+    @extend %list;
+  }
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+  &__btn {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 24px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    border-radius: 20px;
+    border: 1px solid;
+
+    transition: $transition-animation $transition-duration;
+    transition-property: background-color, border-color, color;
+  }
+  &__btn--colored {
+    width: 61px;
+    color: $color-text-lighter;
+    background-color: $color-accent;
+    border-color: $color-accent;
+    &:hover,
+    &:focus {
+      background-color: $color-accent-dark;
+      border-color: $color-accent-dark;
+    }
+  }
+  &__btn--uncolored {
+    width: 82px;
+    color: $color-accent;
+    background-color: $bg-button-secondary;
+    border-color: $bg-button-secondary;
+
+    &:hover,
+    &:focus {
+      background-color: $bg-button-secondary-active;
+      border-color: $bg-button-secondary-active;
+    }
+  }
+  &__circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: $color-secondary;
+    z-index: 0;
+    &--top {
+      width: 346px;
+      height: 344px;
+
+      bottom: 75px;
+      right: -52px; //-36 - 26, где 26 это 346-320
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 0px;
+    right: 32px;
+    z-index: 0;
+  }
+}
+
+.hero-other {
+  @include mq(mobile-only) {
+    display: none;
+  }
+}
+
+.achiv {
+  &__item {
+    @extend %list;
+  }
+}
