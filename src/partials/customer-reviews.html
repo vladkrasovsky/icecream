@@ -1,10 +1,9 @@
 <!-- Customer Reviews Section -->
 
 <section class="customer-reiews">
+  <h2 class="visually-hidden">customer-reiews</h2>
   <div class="container slick-list">
     <div class="slick-slide">
-      <h2 class="visually-hidden">customer-reiews</h2>
-
       <picture class="customer-reiews__logo">
         <source
           srcset="
@@ -19,6 +18,10 @@
       </picture>
 
       <div class="customer-reiews__quote">
+        <svg class="customer-reiews__quote-icon">
+          <use href="./images/icons.svg#quotes"></use>
+        </svg>
+
         <p class="customer-reiews__text">
           Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
           Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
@@ -26,44 +29,84 @@
         </p>
       </div>
 
-      <ul class="dots-list">
-        <li class="dots-item">
-          <div class="dot"></div>
-        </li>
-        <li class="dots-item">
-          <div class="dot"></div>
-        </li>
-        <li class="dots-item">
-          <div class="dot"></div>
-        </li>
-      </ul>
-
       <p class="customer-reiews__name">Emily, Los Angeles</p>
     </div>
+
+    <div class="slick-slide">
+      <picture class="customer-reiews__logo">
+        <source
+          srcset="
+            ./images/customer_reviews/jaine.png    1x,
+            ./images/customer_reviews/jaine@2x.png 2x
+          "
+        />
+        <img
+          src="./images/customer_reviews/jaine.png"
+          alt="Customer girl foto"
+        />
+      </picture>
+
+      <div class="customer-reiews__quote">
+        <svg class="customer-reiews__quote-icon">
+          <use href="./images/icons.svg#quotes"></use>
+        </svg>
+
+        <p class="customer-reiews__text">
+          Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+          Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+          ipsum primis in nibh vel risus.
+        </p>
+      </div>
+
+      <p class="customer-reiews__name">Jaine, New York</p>
+    </div>
+
+    <div class="slick-slide">
+      <picture class="customer-reiews__logo">
+        <source
+          srcset="
+            ./images/customer_reviews/loraine.png    1x,
+            ./images/customer_reviews/loraine@2x.png 2x
+          "
+        />
+        <img
+          src="./images/customer_reviews/loraine.png"
+          alt="Customer girl foto"
+        />
+      </picture>
+
+      <div class="customer-reiews__quote">
+        <svg class="customer-reiews__quote-icon">
+          <use href="./images/icons.svg#quotes"></use>
+        </svg>
+
+        <p class="customer-reiews__text">
+          Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+          Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+          ipsum primis in nibh vel risus.
+        </p>
+      </div>
+
+      <p class="customer-reiews__name">Loraine, Detroit</p>
+    </div>
+
     <ul class="slick-switchers-list">
       <li class="slick-switchers-item">
-        <a
-          class="slick-switchers"
-          href="#"
-          target="_blank"
-          rel="nofollow"
-          onclick="return false;"
-        >
-          <svg class="slick-switchers__icon">
-            <use href="./images/icons.svg#house"></use>
-          </svg>
+        <a class="slick-switchers" href="#" target="_blank" rel="nofollow" onclick="return false;">
+          <div class="slick-switchers-icon--active"></div>
         </a>
       </li>
       <li class="slick-switchers-item">
-        <a href="#" target="_blank" rel="nofollow" onclick="return false;">
-          <div class="slick-switchers-circle"></div>
+        <a class="slick-switchers href="#" target="_blank" rel="nofollow" onclick="return false;">
+          <div class="slick-switchers-icon"></div>
         </a>
       </li>
       <li class="slick-switchers-item">
-        <a href="#" target="_blank" rel="nofollow" onclick="return false;">
-          <div class="slick-switchers-circle"></div>
+        <a class="slick-switchers href="#" target="_blank" rel="nofollow" onclick="return false;">
+          <div class="slick-switchers-icon"></div>
         </a>
       </li>
     </ul>
+
   </div>
 </section>
