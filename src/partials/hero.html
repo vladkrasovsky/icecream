@@ -5,7 +5,8 @@
         <h1
           class="hero-content__top-text top-text top-text--light top-text--large"
         >
-          ice cream made with <span class="title">passion</span>
+          ice cream made with
+          <span class="hero-content__title title">passion</span>
         </h1>
         <ul class="hero-content__menu">
           <li class="hero-content__item">
@@ -41,19 +42,19 @@
       />
     </div>
     <div class="hero-other">
+      <img
+        class="hero-other__carafe"
+        srcset="
+          ./images/hero/milk-tab.png     152w,
+          ./images/hero/milk-tab@2x.png  304w,
+          ./images/hero/milk-desk.png    213w,
+          ./images/hero/milk-desk@2x.png 426w
+        "
+        sizes="(min-width: 1200px) 213px, (min-width: 768px) 152px"
+        src="./images/hero/milk-tab.png"
+        alt="carafe of milk"
+      />
       <div class="hero-slider">
-        <img
-          class="hero-slider__icon"
-          srcset="
-            ./images/hero/milk-tab.png     152w,
-            ./images/hero/milk-tab@2x.png  304w,
-            ./images/hero/milk-desk.png    213w,
-            ./images/hero/milk-desk@2x.png 426w
-          "
-          sizes="(min-width: 1200px) 213px, (min-width: 768px) 152px"
-          src="./images/hero/milk-tab.png"
-          alt="carafe of milk"
-        />
         <p class="hero-slider__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
@@ -66,23 +67,23 @@
               alt="Arrow Button"
             />
           </button>
-          <p class="slider-hidden__text">
+          <!-- <p class="slider-hidden__text">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit
-          </p>
+          </p> -->
         </div>
       </div>
       <ul class="achiv">
         <li class="achiv__item">
-          <p class="achiv__number">16</p>
+          <p class="achiv__number title">16</p>
           <p class="achiv__text">cafes</p>
         </li>
         <li class="achiv__item">
-          <p class="achiv__number">23</p>
+          <p class="achiv__number title">23</p>
           <p class="achiv__text">food trucks</p>
         </li>
       </ul>
       <img
-        class="hero-testy"
+        class="hero-other__tasty"
         srcset="
           ./images/hero/sotasty-tab.png     190w,
           ./images/hero/sotasty-tab@2x.png  380w,
