@@ -1,31 +1,28 @@
 .about {
   background-color: $color-secondary-lighter;
 
+  // temporary
   padding-top: 60px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 
-  @include mq(mobile) {
+  @include mq(mobile-only) {
     background-image: url(../images/about/milk-bg-mob.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 0 560px;
+    background-position: 0 594px;
 
     @include mq(retina) {
       background-image: url(../images/about/milk-bg-mob@2x.png);
     }
   }
-
-  @include mq(tablet) {
-    background-image: none;
-  }
 }
 
 .about__top-text {
-  @include centeredFlex($type: flex);
+  text-align: center;
 }
 
 .about__title {
-  @include centeredFlex($type: flex);
+  text-align: center;
   margin-top: 15px;
 }
 
@@ -53,6 +50,12 @@
   }
 }
 
+.about__content {
+  @include mq(mobile-only) {
+    padding-right: 60px;
+  }
+}
+
 .about__first-text {
   font-weight: 500;
 
@@ -75,7 +78,7 @@
   font-weight: 500;
   color: $color-text-light;
 
-  @include mq(mobile) {
+  @include mq(mobile-only) {
     margin-top: 25px;
     font-size: 12px;
     line-height: 162%;
@@ -94,6 +97,10 @@
   @include mq(tablet) {
     margin-top: 40px;
   }
+}
+
+.btn__icon {
+  fill: currentColor;
 }
 
 .btn__icon {
