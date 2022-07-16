@@ -1,0 +1,121 @@
+.contacts {
+  background-image: linear-gradient(to bottom, #E5E5E5 10%, $color-secondary-lighter 90%,);
+}
+
+.list {
+@extend %list;}
+
+.contacts-list {
+  font-weight: 500;
+  &__item {
+  background-color: $bg-body;
+  
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    padding: 40px 32px;
+
+    @include mq(mobile-only) {
+      min-width: 280px;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    @include mq(tablet-only) {
+      min-width: 224px;
+      max-width: 100%;
+    }
+  }
+  @include mq(tablet-only) {
+    padding: 0px 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 32px;
+}
+
+  &__link {
+    font-size: 12px;
+    background-color: $color-coffee;
+    text-transform: uppercase;
+    border-radius: 4px;
+    max-width: 80px;
+    display: flex;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $color-text-lighter;
+    justify-content: center;
+    flex-wrap: nowrap;
+    &--foodtruck {
+      font-size: 12px;
+      max-width: 138px;
+      text-transform: uppercase;
+      background-color: $color-milkshakes;
+      color: $color-text-lighter;
+      border-radius: 4px;
+      display: flex;
+      text-align: center;
+      letter-spacing: 0.04em;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+  }
+
+  @include mq(mobile-only) {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact-location {
+  padding-top: 20px;
+  padding-bottom: 24px;
+  &__text {
+    color: $color-text-light;
+  }
+}
+
+.schedule-list {
+  padding: 24px 0px;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+}
+
+.schedule-time {
+  color: $color-secondary;
+  font-weight: 500;
+}
+
+.contact-info {
+  padding-top: 24px;
+  &__link {
+    color: $color-text-light;
+  }
+}
+
+.line {
+  display: flex;
+  border: 1px solid $color-border;
+  background-color: $color-border;
+}
+
+.info-btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+}
+
+.btn-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 32px;
+  justify-content: center;
+
+  @include mq(tablet) {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 14.5px;
+  }
+}
