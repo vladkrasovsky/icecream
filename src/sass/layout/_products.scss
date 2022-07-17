@@ -190,10 +190,6 @@
   margin-left: auto;
   margin-right: auto;
 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
   @include mq(desktop) {
     margin-top: 60px;
   }
