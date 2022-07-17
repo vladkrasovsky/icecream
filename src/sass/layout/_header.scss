@@ -9,7 +9,10 @@
     // .header__container
   
     &__container {
-        position: relative;
+        @include mq(tablet) {
+  display: flex;
+  align-items: center;
+}
     }
   
     // .header__mdl
@@ -45,6 +48,43 @@
         .header__mdl--arrow{
             fill:$bg-body;
       }
+  }
+
+  &--tablet{
+    display: none;
+    width:160px;
+    height: 44px;
+    margin-right: 0;
+    background-color: $bg-body;
+    color: $color-accent;
+    border-radius: 22px;
+    border: none;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(21/16);
+    align-items: center;
+    text-align: center;
+
+    &:hover,
+&:focus{
+  background-color: $color-accent;
+  color: $color-text-lighter;
+  .header__mdl--arrow{
+    color:$bg-body;
+    fill:currentColor;
+    transition: fill $transition-duration $transition-animation;
+}
+}
+
+    @include mq(tablet) {
+        display: block;
+        &.is-open{
+            display: none;
+        }
+}
   }
   
   &--env{
@@ -106,6 +146,12 @@
       border: none;
       display: inline-flex;
       text-transform: none;
+      @include mq(tablet) {
+  margin-right: 32px;
+  &.is-open{
+    margin-right: -37px;
+  }
+}
       
       &:hover,
       &:focus{
@@ -143,9 +189,9 @@
         height: 100vh;
 
     @include mq(tablet) {
-        position: absolute;
-        top: 0;
-        right: 0;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
         margin-left: auto;
         margin-right: 0;
         width: 254px;
@@ -179,6 +225,7 @@
     // .nav__list
   
     &__list {
+        @extend %list
     }
   
     // .nav__item
