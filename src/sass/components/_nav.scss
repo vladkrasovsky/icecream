@@ -1,0 +1,39 @@
+// Nav
+
+.nav {
+  @extend %list;
+
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  //   padding-bottom: $header-padding;
+  //   padding-top: $header-padding;
+
+  color: $color-secondary-lighter;
+  font-weight: 700;
+  line-height: calc(
+    21 / 16
+  ); /* need equal value to get propper height (80px) of header */
+
+  transition: $transition-duration $transition-animation;
+  transition-property: color;
+}
+
+// link states
+.nav__link:hover,
+.nav__link:focus,
+.nav__item--current .nav__link {
+  color: $color-accent;
+}
+
+.nav__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
