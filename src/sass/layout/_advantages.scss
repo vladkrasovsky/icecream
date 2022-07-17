@@ -11,13 +11,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+  @include mq (desktop) {
+    gap: 80px;
+}
 }
 .advantages__item {
   @include mq(tablet) {
     display: block;
     width: 170px;
   }
-
+  @include mq (desktop) {
+    width: 288px;
+}
   &::before {
     display: block;
     content: ' ';
@@ -29,6 +34,9 @@
     @include mq(tablet) {
       margin-bottom: 36px;
     }
+    @include mq (desktop) {
+      margin-bottom: 40px;
+  }
   }
 }
 .advantages__item--milk {
@@ -67,6 +75,10 @@
     text-transform: none;
     margin-bottom: 13px;
   }
+  @include mq (desktop) {
+    @include font(58px, 1.14, 400, 0.04em);
+    margin-bottom: 16px;
+}
 }
 .advantages__discription {
   @include font(12px, 1.7, 700, 0.04em);
@@ -74,4 +86,7 @@
   @include mq(tablet) {
     font-size: 14px;
   }
+  @include mq (desktop) {
+    @include font(16px, 1.8, 700, 0.02em);
+}
 }
