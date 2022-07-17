@@ -6,43 +6,37 @@
   );
 }
 
-@include mq(mobile-only) {
-  p {
-    font-size: 12px;
-    line-height: 1.86;
-  }
-  a {
+.contact-location__text,
+.contact-info__link,
+.contact-location__label {
+  @include mq(mobile-only) {
     font-size: 12px;
     line-height: 1.5;
   }
-  .contact-location__text {
-    line-height: 1.5;
-  }
-}
-
-@include mq(tablet-only) {
-  p {
-    font-size: 14px;
-    line-height: 1.86;
-  }
-  a {
+  @include mq(tablet-only) {
     font-size: 14px;
     line-height: 1.83;
   }
-  .contact-location__text {
-    line-height: 1.66;
+  @include mq(desktop) {
+    font-size: $font-size;
+    line-height: 1.83;
   }
 }
 
-@include mq(desktop) {
-  p {
+.schedule-time,
+.schedule-day {
+  @include mq(mobile-only) {
+    font-size: 12px;
     line-height: 1.86;
   }
-  a {
-    line-height: 1.83;
+
+  @include mq(tablet-only) {
+    font-size: 14px;
+    line-height: 1.86;
   }
-  .contact-location__text {
-    line-height: 1.83;
+  @include mq(desktop) {
+    font-size: $font-size;
+    line-height: 1.86;
   }
 }
 
