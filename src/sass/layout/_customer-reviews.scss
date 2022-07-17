@@ -11,59 +11,71 @@
   }
 }
 
-.customer-reiews__logo {
-  justify-content: center;
-  display: flex;
-  margin-bottom: 32px;
+.customer-reiews__container {
+  @include mq(mobile-only) {
+    max-width: 480px;
+  }
+}
+
+.customer-reiews__item {
+  margin-bottom: $gap;
+  text-align: center;
 
   @include mq(tablet) {
-    margin-bottom: 20px;
+    margin-bottom: calc($gap * 2);
   }
+}
 
+.customer-reiews__logo {
+  display: block;
+  height: 85px;
+  width: 85px;
+
+  margin-bottom: calc($gap * 2);
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 50%;
+
+  @include mq(tablet) {
+    margin-bottom: calc($gap * 1.25);
+  }
   @include mq(desktop) {
-    margin-bottom: 16px;
+    margin-bottom: $gap;
   }
 }
 
 .customer-reiews__quote {
   position: relative;
-  width: 280px;
-  margin-bottom: 16px;
-  padding-top: 43px;
-  padding-bottom: 17px;
-  display: flex;
-  align-items: center;
+
+  margin-bottom: $gap;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 43px 50px 17px;
+
+  text-align: center;
   background-color: $bg-customer-sliders;
-  justify-content: center;
 
   @include mq(tablet) {
-    width: 620px;
-    height: 164px;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 6px;
-    padding-right: 6px;
+    max-width: 620px;
+    padding: 37px 6px;
     margin-bottom: 4px;
   }
-
+  @include mq(tablet-only) {
+    background-color: rgba($bg-customer-sliders, 0.4);
+  }
   @include mq(desktop) {
-    width: 968px;
-    height: 138px;
-    padding-top: 45px;
-    margin-bottom: 16px;
+    max-width: 968px;
+    padding: 47px 74px 31px;
+    margin-bottom: $gap;
   }
 }
 
 .customer-reiews__text {
-  z-index: 999;
-  font-family: $font-stack;
-  width: 180px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 2.55;
-  text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  position: relative;
+  padding-left: $gap;
+  padding-right: $gap;
+  @include font(12px, 2.55, 500);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent,
@@ -74,8 +86,6 @@
   border-bottom: 1px solid $color-border;
 
   @include mq(tablet) {
-    width: 100%;
-    height: 85px;
     font-size: 14px;
     line-height: 2.16;
     letter-spacing: 0.04em;
@@ -86,24 +96,26 @@
   @include mq(desktop) {
     font-size: 16px;
     line-height: 1.86;
-    padding-left: 40px;
-    padding-right: 40px;
-    border-bottom: none;
-    width: 820px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 }
 
 .customer-reiews__quote-icon {
   position: absolute;
-  fill: $color-border;
+  top: 30px;
+  left: 53px;
   width: 54px;
   height: 40px;
-  top: 25px;
-  left: 50px;
+  fill: $color-border;
 
   @include mq(tablet) {
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 6px;
+  }
+
+  @include mq(tablet-only) {
+    width: 60px;
   }
 
   @include mq(desktop) {
@@ -113,59 +125,51 @@
 }
 
 .customer-reiews__name {
-  text-align: center;
+  @include font(14px, 1.86, 500);
+
+  @include mq(tablet) {
+    font-size: 16px;
+  }
+
+  @include mq(desktop) {
+    font-size: 20px;
+  }
 
   &::before {
     content: '';
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 16px;
-    background-image: url(../images/svg/ellipse-group.svg);
-    background-position: center;
-    background-size: cover;
+
     display: block;
     width: 32px;
     height: 4px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $gap;
+
+    background-image: url(../images/svg/ellipse-group.svg);
+    background-position: center;
+    background-size: cover;
   }
 }
 
-.slick-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-
-  @include mq(tablet) {
-    margin-bottom: 32px;
-  }
-}
-
-.slick-switchers-item:nth-child(2) {
+.slick-switchers-item:not(:last-child) {
   margin-right: 18px;
-  margin-left: 18px;
 }
 
 .slick-switchers-list {
   @extend %list;
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-items: baseline;
-}
-
-.slick-switchers-icon--active {
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../images/svg/house.svg);
-  width: 12px;
-  height: 12px;
 }
 
 .slick-switchers-icon {
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../images/svg/ellipse.svg);
   width: 12px;
   height: 12px;
+  background-image: url(../images/svg/ellipse.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .slick-switchers-item--active & {
+    background-image: url(../images/svg/house.svg);
+  }
 }
