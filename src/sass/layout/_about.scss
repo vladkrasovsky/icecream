@@ -9,7 +9,6 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 594px;
-
     @include mq(retina) {
       background-image: url(../images/about/milk-bg-mob@2x.png);
     }
@@ -33,13 +32,19 @@
   }
 }
 
-.about__top-text {
+.about__container {
+  @include mq(mobile-only) {
+    max-width: 480px;
+  }
+}
+
+.about__top-text,
+.about__title {
   text-align: center;
 }
 
 .about__title {
-  text-align: center;
-  margin-top: 15px;
+  margin-top: $gap;
 }
 
 .about__flex {
@@ -57,7 +62,6 @@
   @include mq(tablet) {
     margin-right: 32px;
   }
-
   @include mq(desktop) {
     margin-right: 100px;
   }
@@ -65,82 +69,56 @@
 
 .about__content {
   @include mq(mobile-only) {
-    padding-right: 60px;
+    padding-right: 16%;
   }
-
-  @include mq(tablet) {
+  @include mq(tablet-only) {
     max-width: 334px;
   }
-
   @include mq(desktop) {
     max-width: 463px;
     padding-top: 90px;
   }
 }
 
-.about__content {
-  @include mq(mobile-only) {
-    padding-right: 60px;
-  }
-}
-
-.about__first-text {
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: $color-text;
+.about__text {
+  @include font(12px, 162%, 500, 0.04em);
+  color: $color-text-light;
 
   @include mq(mobile-only) {
-    font-size: 12px;
-    line-height: 162%;
-    margin-top: 40px;
+    margin-top: 25px;
   }
-
   @include mq(tablet) {
     font-size: 14px;
     line-height: 176%;
   }
+  @include mq(desktop) {
+    line-height: 194%;
+  }
+}
 
+.about__text--main {
+  color: $color-text;
+
+  @include mq(mobile-only) {
+    margin-top: 40px;
+  }
   @include mq(desktop) {
     font-size: 16px;
   }
 }
 
-.about__second-text,
-.about__third-text {
-  font-weight: 500;
-  color: $color-text-light;
-  letter-spacing: 0.04em;
-
-  @include mq(mobile-only) {
-    margin-top: 25px;
-    font-size: 12px;
-    line-height: 162%;
-  }
-
+.about__text--secondary {
   @include mq(tablet) {
-    font-size: 14px;
-    line-height: 176%;
     margin-top: 20px;
   }
-
   @include mq(desktop) {
-    line-height: 194%;
     margin-top: 32px;
   }
 }
 
 .about__btn {
   margin-top: 20px;
-
   @include mq(tablet) {
     margin-top: 40px;
   }
-}
-
-.btn__icon {
-  fill: currentColor;
-}
-
-.btn__icon {
-  fill: currentColor;
 }
