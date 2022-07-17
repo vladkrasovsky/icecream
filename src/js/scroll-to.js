@@ -1,7 +1,7 @@
 (function () {
 
     const smoothScroll = function (targetEl, duration) {
-        const headerElHeight =  document.querySelector('.scroll-to').clientHeight;
+        const headerElHeight =  document.querySelector('.scroll-to') ? document.querySelector('.scroll-to').clientHeight : 0;
         let target = document.querySelector(targetEl);
         let targetPosition = target.getBoundingClientRect().top - headerElHeight;
         let startPosition = window.pageYOffset;

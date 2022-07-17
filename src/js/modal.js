@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
   );
 
   overlay.addEventListener('click', function () {
+    if (!document.querySelector('.modal.active')) return;
     document.querySelector('.modal.active').classList.remove('active');
     this.classList.remove('active');
   });
