@@ -1,0 +1,166 @@
+footer {
+  background-color: $color-secondary-lighter;
+}
+
+.footer__container {
+  padding-top: 40px;
+
+  @include mq(tablet) {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include mq(desktop) {
+    padding-top: 120px;
+  }
+
+}
+
+.footer__middle {
+  @include mq(mobile) {
+    width: 234px;
+  }
+
+  @include mq(tablet) {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include mq(desktop) {
+    width: 500px;
+  }
+}
+
+.title {
+  @include mq(mobile) {
+    padding-top: 16px;
+  }
+
+  @include mq(tablet) {
+    font-size: 48px;
+    line-height: 55px;
+    padding-bottom: 40px;
+    padding-top: 12px;
+  }
+
+  @include mq(desktop) {
+    font-size: 58px;
+    line-height: 66px;
+    letter-spacing: 0.06em;
+    padding-bottom: 60px;
+    padding-top: 16px;
+  }
+}
+
+.top-text {
+  @include mq(tablet) {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  @include mq(desktop) {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 0.04em;
+  }
+
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 186%;
+  padding-bottom: 40px;
+
+  @include mq(tablet) {
+    font-size: 14px;
+  }
+
+  @include mq(desktop) {
+    font-size: 16px;
+  }
+
+}
+
+
+.footer__tel {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__tel-free {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2px;
+  color: $color-text;
+}
+
+.footer__tel-number {
+  display: flex;
+  justify-content: flex-end;
+  color: $color-accent;
+}
+
+.footer__social-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+
+     @include mq(mobile) {
+        padding: 40px 0;
+     }
+}
+
+.footer__social-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.footer__social-link {
+    fill: $color-secondary;
+      transition-property: fill;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(.23, .63, .71, .51);
+
+      &:hover,
+      &:focus {
+        fill: $color-accent;
+}
+}
+
+.footer__icon {
+    width: 32px;
+    height: 32px;
+
+    @include mq(tablet) {
+        width: 34;
+        height: 34;
+    }
+}
+
+.footer__licence {
+    width: 100%;
+    border-top: 1px solid $color-border;
+}
+
+.footer__licence--title {
+      padding-top: 16px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 152%;
+      text-align: center;
+      color: $color-text-light;
+      @include mq(mobile) {
+         margin: 0 auto;
+         width: 150px;
+         padding-bottom: 3px;
+      }
+
+        @include mq(tablet) {
+            width: 100%;
+        }
+}
