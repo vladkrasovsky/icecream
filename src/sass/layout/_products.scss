@@ -20,29 +20,27 @@
 }
 
 .products__title {
-  margin-bottom: 148px;
+  margin-bottom: 8px;
 
   text-align: center;
 
   @include mq(tablet-only) {
-    margin-bottom: 169px;
-  }
-
-  @include mq(desktop) {
-    margin-bottom: 281px;
+    margin-bottom: 20px;
   }
 }
 
 .products__list {
-  display: flex;
-  align-items: center;
+  padding-top: 140px;
 
   @include mq(mobile-only) {
+    align-items: center;
     flex-direction: column;
   }
-
-  @include mq(tablet-only) {
-    flex-wrap: wrap;
+  @include mq(tablet) {
+    padding-top: 158px;
+  }
+  @include mq(desktop) {
+    padding-top: 281px;
   }
 }
 
@@ -52,7 +50,7 @@
   flex-direction: column;
   align-items: center;
   border-radius: 24px;
-  width: 100%;
+
   @include mq(mobile-only) {
     max-width: 280px;
     min-height: 489px;
@@ -63,25 +61,14 @@
   }
 
   @include mq(tablet-only) {
-    width: calc((100% - 32px) / 3);
     max-width: 224px;
     min-height: 473px;
     padding: 118px 32px 40px;
-
-    &:not(:last-child) {
-      margin-right: 16px;
-    }
   }
 
   @include mq(desktop) {
-    width: calc((100% - 64px) / 3);
-    max-width: 368px;
     min-height: 535px;
     padding: 165px 62px 60px 61px;
-
-    &:not(:last-child) {
-      margin-right: 32px;
-    }
   }
 }
 
@@ -90,16 +77,19 @@
 
   &::before {
     content: '';
+
     position: absolute;
-    left: auto;
+    left: 0;
+
+    width: 100%;
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: block;
     background-image: url(../images/products/ice-mob.png);
+
     @include mq(mobile-only) {
       top: -140px;
-      width: 280px;
       height: 280px;
       @include mq(retina) {
         background-image: url(../images/products/ice-mob@2x.png);
@@ -107,7 +97,6 @@
     }
     @include mq(tablet-only) {
       top: -138px;
-      width: 224px;
       height: 224px;
 
       background-image: url(../images/products/ice-tab.png);
@@ -118,8 +107,7 @@
     }
 
     @include mq(desktop) {
-      top: -229px;
-      width: 368px;
+      top: -280px;
       height: 394px;
 
       background-image: url(../images/products/ice-desk.png);
@@ -252,6 +240,12 @@
 
   @include mq(desktop) {
     @include font(16px, 1.76, null, null);
+  }
+}
+
+.products__mobile-text {
+  @include mq(tablet) {
+    display: none;
   }
 }
 
