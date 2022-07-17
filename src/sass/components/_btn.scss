@@ -1,9 +1,6 @@
 .btn {
   @include centeredFlex(inline-flex);
 
-  min-width: 165px;
-  padding: 7px 28px;
-
   line-height: $line-height;
   text-decoration: none;
   color: $color-text-lighter;
@@ -14,12 +11,17 @@
   border-radius: 50px;
 
   transition: $transition-animation $transition-duration;
-  transition-property: background-color, border-color, color;
+  transition-property: background-color, border-color, color, fill;
 
   &:hover,
   &:focus {
     background-color: $color-accent-dark;
     border-color: $color-accent-dark;
+  }
+
+  &:not(.btn--circle) {
+    min-width: 165px;
+    padding: 7px 28px;
   }
 }
 
@@ -52,6 +54,27 @@
   }
 }
 
+.btn--inverse {
+  color: $color-accent;
+  fill: $color-accent;
+  background-color: $bg-button-secondary;
+  border-color: $bg-button-secondary;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    border-color: $color-accent;
+    fill: $color-text-lighter;
+  }
+}
+
 .btn--bold {
   font-weight: 700;
+}
+
+.btn--circle {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
