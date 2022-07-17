@@ -285,6 +285,8 @@
 
     color: $color-text-lighter;
     transition: color $transition-duration $transition-animation;
+
+    .current &,
     &:hover,
     &:focus {
       color: $color-accent;
