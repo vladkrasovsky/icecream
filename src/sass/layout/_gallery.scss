@@ -1,19 +1,17 @@
-.gallery .container {
-}
-
 .gallery {
   background-image: linear-gradient(
     to bottom,
     $color-secondary-lighter 45%,
     transparent 45%
   );
-  padding-top: 20px;
+  padding-top: 30px;
   @include mq(tablet) {
     background-image: linear-gradient(
       to bottom,
-      $color-secondary-lighter 30%,
-      transparent 30%
+      $color-secondary-lighter 60%,
+      transparent 60%
     );
+    padding-top: 32px;
   }
 }
 
@@ -22,10 +20,16 @@
   margin-left: -20px;
   display: flex;
   list-style: none;
+  @include mq(tablet) {
+    margin-left: -32px;
+  }
 }
 
 .gallery__item:not(:last-child) {
   margin-right: 2px;
+  @include mq(tablet) {
+    margin-right: 6px;
+  }
 }
 
 .gallery__pic {
@@ -34,6 +38,9 @@
 
 .gallery__pic--margin {
   margin-bottom: 2px;
+  @include mq(tablet) {
+    margin-bottom: 6px;
+  }
 }
 
 .gallery__pic-5 {
