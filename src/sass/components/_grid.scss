@@ -31,6 +31,10 @@
     .grid--#{$i} > & {
       flex-basis: calc(100% / $i - $gap);
     }
+  }
+
+  // tablet classes
+  @for $i from 1 through 12 {
     .grid--tablet-#{$i} > & {
       @include mq(tablet) {
         flex-basis: calc(100% / $i - $gap);
@@ -39,6 +43,10 @@
         flex-basis: calc(100% / $i - $gap * 2);
       }
     }
+  }
+
+  // desktop classes
+  @for $i from 1 through 12 {
     .grid--desktop-#{$i} > & {
       @include mq(desktop) {
         flex-basis: calc(100% / $i - $gap * 2);
