@@ -1,15 +1,19 @@
 $circle-content-z: 0;
-$img-content-z: 2;
-$text-content-z: 3;
+$img-content-z: 1;
+$text-content-z: 2;
 
 .hero {
   background-color: $color-secondary-light;
-  @include mq(mobile) {
-    overflow: hidden;
-  }
+  overflow-x: hidden;
   &__container {
     position: relative;
     min-height: 502px;
+    @include mq(tablet) {
+      min-height: 416px;
+    }
+    @include mq(desktop) {
+      min-height: 606px;
+    }
   }
 }
 
@@ -17,11 +21,38 @@ $text-content-z: 3;
   &__block {
     position: absolute;
     bottom: 160px;
-    z-index: 1;
+    z-index: $text-content-z;
+    @include mq(tablet) {
+      bottom: 173px;
+    }
+    @include mq(desktop) {
+      bottom: 316px;
+    }
   }
   &__top-text {
     max-width: 218px;
     margin-bottom: 20px;
+    line-height: 1.145;
+    @include mq(tablet) {
+      max-width: 173px;
+      font-size: 22px;
+    }
+    @include mq(desktop) {
+      max-width: 316px;
+      font-size: 38px;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    line-height: 0.965;
+    @include mq(tablet) {
+      font-size: 34px;
+      line-height: 0.905;
+    }
+    @include mq(desktop) {
+      font-size: 58px;
+      line-height: 0.905;
+    }
   }
   &__menu {
     display: flex;
@@ -50,9 +81,15 @@ $text-content-z: 3;
 
     transition: $transition-animation $transition-duration;
     transition-property: background-color, border-color, color;
+
+    @include mq(desktop) {
+      height: 40px;
+      font-size: 14px;
+      line-height: 1.3;
+    }
   }
   &__btn--colored {
-    width: 61px;
+    min-width: 61px;
     color: $color-text-lighter;
     background-color: $color-accent;
     border-color: $color-accent;
@@ -61,30 +98,47 @@ $text-content-z: 3;
       background-color: $color-accent-dark;
       border-color: $color-accent-dark;
     }
+    @include mq(desktop) {
+      min-width: 107px;
+    }
   }
   &__btn--uncolored {
-    width: 82px;
+    min-width: 82px;
     color: $color-accent;
     background-color: $bg-button-secondary;
     border-color: $bg-button-secondary;
-
     &:hover,
     &:focus {
       background-color: $bg-button-secondary-active;
       border-color: $bg-button-secondary-active;
+    }
+    @include mq(desktop) {
+      min-width: 138px;
     }
   }
   &__circle {
     position: absolute;
     border-radius: 50%;
     background-color: $color-secondary;
-    z-index: 0;
+    z-index: $circle-content-z;
     &--top {
       width: 346px;
       height: 344px;
 
       bottom: 75px;
-      right: -52px; //-36 - 26, где 26 это 346-320
+      right: -62px; //-36 - 26, де 26 це 346-320
+    }
+    @include mq(tablet) {
+      bottom: 40px;
+      right: 185px;
+      width: 335px;
+      height: 333px;
+    }
+    @include mq(desktop) {
+      bottom: 76px;
+      right: 149px;
+      width: 534px;
+      height: 534px;
     }
   }
 
@@ -92,7 +146,13 @@ $text-content-z: 3;
     position: absolute;
     bottom: 0px;
     right: 32px;
-    z-index: 0;
+    z-index: $img-content-z;
+    @include mq(tablet) {
+      right: 303px;
+    }
+    @include mq(desktop) {
+      right: 328px;
+    }
   }
 }
 
@@ -100,10 +160,126 @@ $text-content-z: 3;
   @include mq(mobile-only) {
     display: none;
   }
+  &__carafe {
+    position: absolute;
+    bottom: 16px;
+    @include mq(desktop) {
+      bottom: 60px;
+    }
+  }
+  &__tasty {
+    position: absolute;
+    bottom: 0;
+    right: 32px;
+  }
+}
+
+.hero-slider {
+  position: absolute;
+  bottom: 56px;
+  left: 184px;
+  @include mq(desktop) {
+    bottom: 84px;
+    left: 229px;
+  }
+  &__text {
+    margin-bottom: 7px;
+
+    max-width: 114px;
+    font-size: 8px;
+    line-height: 1.5;
+    color: $color-text-lighter;
+    @include mq(desktop) {
+      margin-bottom: 20px;
+
+      max-width: 200px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+}
+
+.slider-hidden {
+  position: relative;
+  &__button {
+    display: inline-flex;
+    padding: 0;
+    background: none;
+    border-radius: 50%;
+    border-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  &__icon {
+    width: 18px;
+    height: 18px;
+    @include mq(desktop) {
+      width: 26px;
+      height: 26px;
+    }
+  }
 }
 
 .achiv {
+  position: absolute;
+  top: 96px;
+  right: 42px;
+  @include mq(desktop) {
+    top: 152px;
+    right: 34px;
+  }
   &__item {
     @extend %list;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+  &__number {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 1;
+
+    font-size: 28px;
+    line-height: 1.14;
+    text-align: right;
+    color: $color-accent;
+    @include mq(desktop) {
+      margin-bottom: 2px;
+
+      font-size: 46px;
+      line-height: 1.15;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+
+    color: $color-text-lighter;
+    @include mq(desktop) {
+      font-size: 14px;
+      line-height: 1.29;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $color-text-lighter;
+      z-index: 0;
+      top: -2px;
+      right: -10px;
+
+      @include mq(desktop) {
+        width: 30px;
+        height: 30px;
+        right: -18px;
+      }
+    }
   }
 }

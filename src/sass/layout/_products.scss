@@ -1,0 +1,236 @@
+.products__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    @include mq(tablet-only) {
+        padding-top: 49px;
+    }
+}
+
+.products__top-text {
+    text-align: center;
+    
+    @include mq(mobile-only) {
+        margin-bottom: 15px;
+    }
+    
+    @include mq(tablet-only) {
+        margin-bottom: 18px;
+    }
+}
+
+.products__title {
+    margin-bottom: 148px;
+
+    text-align: center;
+
+    @include mq(tablet-only) {
+        margin-bottom: 169px;
+    }
+}
+
+.products__list {
+    display: flex;
+    align-items: center;
+
+    @include mq(mobile-only) {
+        flex-direction: column;
+    }
+
+    @include mq(tablet-only) {
+        flex-wrap: wrap;
+    }
+}
+
+
+.products__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+    width: 100%;
+    
+    @include mq(mobile-only) {
+        max-width: 280px;
+        min-height: 489px;
+        padding: 160px 39px 40px 41px;
+    
+        &:not(:last-child) {
+            margin-bottom: 140px;
+        }
+    }
+    
+    @include mq(tablet-only) {
+    
+        width: calc((100% - 32px) / 3);
+        max-width: 224px;
+        min-height: 473px;
+        padding: 118px 32px 40px;
+    
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+}
+
+
+.products__item--first {
+    background-color: $color-secondary-light;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        left: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        background-image: url(../images/products/ice-mob.png);
+    
+        @include mq(mobile-only) {
+            top: -140px;
+            width: 280px;
+            height: 280px;
+    
+            @include mq(retina) {
+                background-image: url(../images/products/ice-mob@2x.png);
+            }
+        }
+    
+        @include mq(tablet-only) {
+            top: -138px;
+            width: 224px;
+            height: 224px;
+    
+            background-image: url(../images/products/ice-tab.png);
+    
+            @include mq(retina) {
+                background-image: url(../images/products/ice-tab@2x.png);
+            }
+        }
+    }
+}
+
+.products__item--second {
+    background-color: $color-coffee;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: auto;
+    
+        background-image: url(../images/products/shake-mob.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+    
+        @include mq(mobile-only) {
+            top: -140px;
+            width: 280px;
+            height: 280px;
+    
+            @include mq(retina) {
+                background-image: url(../images/products/shake-mob@2x.png);
+            }
+        }
+    
+        @include mq(tablet-only) {
+            top: -138px;
+            width: 224px;
+            height: 224px;
+    
+            background-image: url(../images/products/shake-tab.png);
+    
+            @include mq(retina) {
+                background-image: url(../images/products/shake-tab@2x.png);
+            }
+        }
+    }
+}
+
+.products__item--third {
+    background-color: $color-milkshakes;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: auto;
+    
+        background-image: url(../images/products/shoko-mob.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+    
+        @include mq(mobile-only) {
+            top: -136px;
+            width: 280px;
+            height: 280px;
+    
+            @include mq(retina) {
+                background-image: url(../images/products/shoko-mob@2x.png);
+            }
+        }
+    
+        @include mq(tablet-only) {
+            top: -136px;
+            width: 224px;
+            height: 224px;
+    
+            background-image: url(../images/products/shoko-tab.png);
+    
+            @include mq(retina) {
+                background-image: url(../images/products/shoko-tab@2x.png);
+            }
+        }
+    }
+}
+
+.products__item-title {
+
+    font-size: 20px;
+    text-align: center;
+}
+
+.products__icon {
+    margin: 32px auto;
+    fill: $color-text-lighter;
+}
+
+
+.products__text {
+    @include font(14px, 1.52, 700, null);
+    
+    letter-spacing: 0.04em;
+    text-align: center;
+    
+    color: $color-text-lighter;
+    
+    @include mq(tablet-only) {
+        @include font(null, 1.76, null, null);
+    }
+}
+
+.products__button {
+
+    margin-top: 32px;
+
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/products/arrow-right.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(retina) {
+        background-image: url(../images/products/arrow-right@2x.png);
+    }
+}
+
