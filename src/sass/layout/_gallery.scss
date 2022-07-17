@@ -13,6 +13,14 @@
     );
     padding-top: 32px;
   }
+  @include mq(desktop) {
+    background-image: linear-gradient(
+      to bottom,
+      $color-secondary-lighter 35%,
+      transparent 35%
+    );
+    padding-top: 60px;
+  }
 }
 
 .gallery__list {
@@ -23,12 +31,20 @@
   @include mq(tablet) {
     margin-left: -32px;
   }
+  @include mq(desktop) {
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .gallery__item:not(:last-child) {
   margin-right: 2px;
   @include mq(tablet) {
     margin-right: 6px;
+  }
+  @include mq(desktop) {
+    margin-right: 8px;
   }
 }
 
@@ -40,6 +56,9 @@
   margin-bottom: 2px;
   @include mq(tablet) {
     margin-bottom: 6px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 8px;
   }
 }
 
