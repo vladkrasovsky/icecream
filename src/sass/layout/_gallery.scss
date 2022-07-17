@@ -24,12 +24,12 @@
 }
 
 .gallery__list {
-  width: 100vw;
   margin-left: -20px;
   display: flex;
   list-style: none;
   @include mq(tablet) {
     margin-left: -32px;
+    margin-right: -32px;
   }
   @include mq(desktop) {
     margin: 0 auto;
