@@ -1,0 +1,56 @@
+// Grid
+
+.grid {
+  @extend %list;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * $gap);
+  margin-top: calc(-1 * $gap);
+
+  @include mq(desktop) {
+    margin-left: calc(-1 * $gap * 2);
+    margin-top: calc(-1 * $gap * 2);
+  }
+}
+
+.grid__item {
+  flex-basis: calc(100% - $gap);
+  margin-left: $gap;
+  margin-top: $gap;
+
+  @include mq(desktop) {
+    margin-left: calc($gap * 2);
+    margin-top: calc($gap * 2);
+  }
+
+  // will generate grid variants
+  // from: .grid--1 > .grid__item
+  // to:  .grid--12 > .grid__item
+  @for $i from 1 through 12 {
+    .grid--#{$i} > & {
+      flex-basis: calc(100% / $i - $gap);
+    }
+  }
+
+  // tablet classes
+  @for $i from 1 through 12 {
+    .grid--tablet-#{$i} > & {
+      @include mq(tablet) {
+        flex-basis: calc(100% / $i - $gap);
+      }
+      @include mq(desktop) {
+        flex-basis: calc(100% / $i - $gap * 2);
+      }
+    }
+  }
+
+  // desktop classes
+  @for $i from 1 through 12 {
+    .grid--desktop-#{$i} > & {
+      @include mq(desktop) {
+        flex-basis: calc(100% / $i - $gap * 2);
+      }
+    }
+  }
+}

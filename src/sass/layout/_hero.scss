@@ -5,6 +5,9 @@ $text-content-z: 2;
 .hero {
   background-color: $color-secondary-light;
   overflow-x: hidden;
+  @include mq(desktop) {
+    padding-top: $padding-section;
+  }
   &__container {
     position: relative;
     min-height: 502px;

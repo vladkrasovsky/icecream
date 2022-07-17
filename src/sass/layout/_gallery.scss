@@ -1,8 +1,8 @@
 .gallery {
   background-image: linear-gradient(
     to bottom,
-    $color-secondary-lighter 45%,
-    transparent 45%
+    $color-secondary-lighter 29%,
+    transparent 29%
   );
 
   padding-bottom: calc($padding-section / 2);
@@ -11,15 +11,15 @@
   @include mq(tablet) {
     background-image: linear-gradient(
       to bottom,
-      $color-secondary-lighter 60%,
-      transparent 60%
+      $color-secondary-lighter 56.5%,
+      transparent 56.5%
     );
   }
   @include mq(desktop) {
     background-image: linear-gradient(
       to bottom,
-      $color-secondary-lighter 35%,
-      transparent 35%
+      $color-secondary-lighter 31%,
+      transparent 31%
     );
 
     padding-bottom: $padding-section;
@@ -28,22 +28,13 @@
 }
 
 .gallery__list {
-  margin-left: -20px;
+  @extend %list;
   display: flex;
-  list-style: none;
-  @include mq(tablet) {
-    margin-left: -32px;
-    margin-right: -32px;
-  }
-  @include mq(desktop) {
-    margin: 0 auto;
-    justify-content: center;
-    width: 100%;
-  }
+  justify-content: center;
 }
 
 .gallery__item:not(:last-child) {
-  margin-right: 2px;
+  margin-right: 3px;
   @include mq(tablet) {
     margin-right: 6px;
   }
@@ -54,19 +45,19 @@
 
 .gallery__pic {
   display: block;
+
+  & + & {
+    margin-top: 2px;
+    @include mq(tablet) {
+      margin-top: 6px;
+    }
+    @include mq(desktop) {
+      margin-top: 8px;
+    }
+  }
 }
 
-.gallery__pic--margin {
-  margin-bottom: 2px;
-  @include mq(tablet) {
-    margin-bottom: 6px;
-  }
-  @include mq(desktop) {
-    margin-bottom: 8px;
-  }
-}
-
-.gallery__pic-5 {
+.gallery__pic--w50 {
   width: 50%;
 }
 

@@ -4,16 +4,38 @@
 
   background-image: linear-gradient(
     to bottom,
-    #e5e5e5 10%,
-    $color-secondary-lighter 90%
+    transparent 21.5%,
+    $color-secondary-lighter 21.5%
   );
 
   @include mq(tablet) {
     padding-top: calc($padding-section / 1.5);
+
+    background-image: linear-gradient(
+      to bottom,
+      transparent 47.5%,
+      $color-secondary-lighter 47.5%
+    );
   }
   @include mq(desktop) {
     padding-bottom: $padding-section;
     padding-top: $padding-section;
+
+    background-image: linear-gradient(
+      to bottom,
+      transparent 20%,
+      $color-secondary-lighter 20%
+    );
+  }
+}
+
+.contacts__container {
+  @include mq(mobile-only) {
+    max-width: 480px;
+  }
+  @include mq(tablet) {
+    padding-left: $gap;
+    padding-right: $gap;
   }
 }
 
@@ -28,172 +50,141 @@
     font-size: 14px;
     line-height: 1.83;
   }
-  @include mq(desktop) {
-    font-size: $font-size;
-    line-height: 1.83;
-  }
 }
 
 .schedule-time,
 .schedule-day {
+  line-height: 1.86;
   @include mq(mobile-only) {
     font-size: 12px;
-    line-height: 1.86;
   }
-
   @include mq(tablet-only) {
     font-size: 14px;
-    line-height: 1.86;
-  }
-  @include mq(desktop) {
-    font-size: $font-size;
-    line-height: 1.86;
   }
 }
 
-.container--contacts {
-  @include mq(tablet) {
-    padding-left: 16px;
-    padding-right: 16px;
+.contacts-list {
+  @extend %list;
+  font-weight: 500;
+  margin-top: -20px;
 
-    @include mq(mobile-only) {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+  &__item {
+    margin-top: 20px;
+    padding: 40px 32px;
+
+    background-color: $bg-body;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
   }
 
-  .list {
-    @extend %list;
-  }
-
-  .btn__text {
-    font-size: $font-size;
-  }
-
-  .contacts-list {
-    font-weight: 500;
-    &__item {
-      background-color: $bg-body;
-
-      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-      border-radius: 24px;
-      padding: 40px 32px;
-
-      @include mq(mobile-only) {
-        min-width: 280px;
-        max-width: 100%;
-        margin-bottom: 20px;
-      }
-      @include mq(tablet-only) {
-        min-width: 224px;
-        max-width: 100%;
-      }
-      @include mq(desktop) {
-        min-width: 368px;
-        max-width: 100%;
-      }
-    }
+  &__link {
+    font-size: 12px;
+    background-color: $color-coffee;
+    text-transform: uppercase;
+    border-radius: 4px;
+    max-width: 80px;
+    display: flex;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $color-text-lighter;
+    justify-content: center;
+    flex-wrap: nowrap;
     @include mq(tablet) {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 32px;
+      font-size: $font-size;
     }
-
-    &__link {
+    &--foodtruck {
       font-size: 12px;
-      background-color: $color-coffee;
+      max-width: 138px;
       text-transform: uppercase;
+      background-color: $color-milkshakes;
+      color: $color-text-lighter;
       border-radius: 4px;
-      max-width: 80px;
       display: flex;
       text-align: center;
       letter-spacing: 0.04em;
-      color: $color-text-lighter;
       justify-content: center;
       flex-wrap: nowrap;
       @include mq(tablet) {
         font-size: $font-size;
       }
-      &--foodtruck {
-        font-size: 12px;
-        max-width: 138px;
-        text-transform: uppercase;
-        background-color: $color-milkshakes;
-        color: $color-text-lighter;
-        border-radius: 4px;
-        display: flex;
-        text-align: center;
-        letter-spacing: 0.04em;
-        justify-content: center;
-        flex-wrap: nowrap;
-        @include mq(tablet) {
-          font-size: $font-size;
-        }
-      }
     }
+  }
+}
+
+.contact-location {
+  margin-top: calc($gap * 1.25);
+  margin-bottom: 24px;
+
+  @include mq(tablet) {
+    margin-top: calc($gap * 2);
+    margin-bottom: calc($gap * 2);
+  }
+
+  &__label {
+    margin-bottom: 8px;
+    @include mq(tablet-only) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    color: $color-text-light;
 
     @include mq(mobile-only) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      max-width: 179px;
     }
-  }
-
-  .contact-location {
-    padding-top: 20px;
-    padding-bottom: 24px;
-    &__text {
-      color: $color-text-light;
-    }
-  }
-
-  .schedule-list {
-    padding: 24px 0px;
-    border-top: 1px solid $color-border;
-    border-bottom: 1px solid $color-border;
-  }
-
-  .schedule-time {
-    color: $color-secondary;
-    font-weight: 500;
-  }
-
-  .contact-info {
-    padding-top: 24px;
-    &__link {
-      color: $color-text-light;
-    }
-  }
-
-  .line {
-    display: flex;
-    border: 1px solid $color-border;
-    background-color: $color-border;
-  }
-
-  .info-btn {
-    display: flex;
-    justify-content: center;
-    padding-top: 32px;
-  }
-
-  .btn-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-top: 32px;
-    justify-content: center;
-
-    @include mq(tablet) {
-      padding-top: 60px;
-      display: flex;
-      flex-direction: row;
-      gap: 14.5px;
-    }
-
     @include mq(desktop) {
-      gap: 12px;
+      max-width: 243px;
     }
+  }
+}
+
+.schedule-list {
+  @extend %list;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+
+  @include mq(tablet) {
+    padding-bottom: calc($gap * 2);
+    padding-top: calc($gap * 2);
+  }
+}
+
+.schedule-time {
+  color: $color-secondary;
+}
+
+.contact-info {
+  padding-top: 24px;
+
+  &__list {
+    @extend %list;
+  }
+
+  &__link {
+    color: $color-text-light;
+  }
+}
+
+.btn-list {
+  @extend %list;
+  margin-top: calc($gap * 2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  @include mq(tablet) {
+    margin-top: $padding-section;
+    flex-direction: row;
+    gap: 14.5px;
+  }
+
+  @include mq(desktop) {
+    gap: 12px;
   }
 }
