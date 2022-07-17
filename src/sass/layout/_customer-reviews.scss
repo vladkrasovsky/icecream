@@ -1,5 +1,14 @@
 .customer-reiews {
-  padding-bottom: 60px;
+  padding-bottom: calc($padding-section / 2);
+  padding-top: calc($padding-section / 2);
+
+  @include mq(tablet) {
+    padding-bottom: calc($padding-section / 1.5);
+  }
+  @include mq(desktop) {
+    padding-bottom: $padding-section;
+    padding-top: $padding-section;
+  }
 }
 
 .customer-reiews__logo {

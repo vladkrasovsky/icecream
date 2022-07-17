@@ -1,9 +1,20 @@
 .contacts {
+  padding-bottom: calc($padding-section / 3);
+  padding-top: calc($padding-section / 2);
+
   background-image: linear-gradient(
     to bottom,
     #e5e5e5 10%,
     $color-secondary-lighter 90%
   );
+
+  @include mq(tablet) {
+    padding-top: calc($padding-section / 1.5);
+  }
+  @include mq(desktop) {
+    padding-bottom: $padding-section;
+    padding-top: $padding-section;
+  }
 }
 
 .contact-location__text,

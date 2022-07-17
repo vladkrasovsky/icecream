@@ -1,14 +1,6 @@
-.products__container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  @include mq(tablet-only) {
-    padding-top: 49px;
-  }
-
-  @include mq(desktop) {
-    padding-top: 61px;
-  }
+.products {
+  padding-bottom: $padding-section;
+  padding-top: $padding-section;
 }
 
 .products__top-text {
