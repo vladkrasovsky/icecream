@@ -1,9 +1,8 @@
 .about {
-  background-color: $color-secondary-lighter;
+  padding-bottom: calc($padding-section / 3);
+  padding-top: $padding-section;
 
-  // temporary
-  padding-top: 60px;
-  padding-bottom: 20px;
+  background-color: $color-secondary-lighter;
 
   @include mq(mobile-only) {
     background-image: url(../images/about/milk-bg-mob.png);
@@ -14,6 +13,9 @@
     @include mq(retina) {
       background-image: url(../images/about/milk-bg-mob@2x.png);
     }
+  }
+  @include mq(tablet) {
+    padding-bottom: calc($padding-section / 2);
   }
   @include mq(desktop) {
     background-image: url(../images/about/milk-bg-desk.png);
