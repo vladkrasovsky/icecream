@@ -1,24 +1,20 @@
 .container {
-  $padding: 20px;
-
-  padding-left: $padding;
-  padding-right: $padding;
+  $px: calc($gap * 1.25);
+  padding-left: $px;
+  padding-right: $px;
   margin-left: auto;
   margin-right: auto;
 
   @include mq(tablet) {
-    $padding-tablet: 32px;
-
-    padding-left: $padding-tablet;
-    padding-right: $padding-tablet;
+    $px-tablet: calc($gap * 2);
+    padding-left: $px-tablet;
+    padding-right: $px-tablet;
     width: 768px;
   }
 
   @include mq(desktop) {
-    $padding-desktop: 16px;
-
-    padding-left: $padding-desktop;
-    padding-right: $padding-desktop;
+    padding-left: $gap;
+    padding-right: $gap;
     width: 1200px;
   }
 }
