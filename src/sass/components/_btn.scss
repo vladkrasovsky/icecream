@@ -21,7 +21,12 @@
 
   &:not(.btn--circle) {
     min-width: 165px;
-    padding: 7px 28px;
+    padding: 7px 17px;
+
+    @include mq(tablet) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
   }
 }
 
