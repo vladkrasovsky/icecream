@@ -362,6 +362,7 @@ $text-content-z: 2;
   @include mq(desktop) {
     animation-name: fadeLeft;
     animation-duration: 1500ms;
+    animation-delay: 50ms;
     animation-fill-mode: both;
   }
 }
@@ -378,9 +379,9 @@ $text-content-z: 2;
 .fadeRight {
   @include mq(desktop) {
     animation-name: fadeRight;
-    animation-duration: 1800ms;
+    animation-duration: 1500ms;
     animation-fill-mode: both;
-    animation-delay: 400ms;
+    animation-delay: 720ms;
   }
 }
 @keyframes fadeRight {
@@ -398,7 +399,7 @@ $text-content-z: 2;
     animation-name: fadeBottom;
     animation-duration: 1500ms;
     animation-fill-mode: both;
-    animation-delay: 250ms;
+    animation-delay: 100ms;
   }
 }
 @keyframes fadeBottom {
@@ -414,8 +415,9 @@ $text-content-z: 2;
 .slideCenter {
   @include mq(desktop) {
     animation-name: slideCenter;
-    animation-duration: 1500ms;
+    animation-duration: 1700ms;
     animation-fill-mode: both;
+    animation-delay: 700ms;
   }
 }
 @keyframes slideCenter {
