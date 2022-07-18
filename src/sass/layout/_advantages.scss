@@ -72,9 +72,10 @@
     font-size: 58px;
   }
 }
-.advantages__title--after::after {
-  display: block;
-  content: 'kg';
+
+.advantages__count,
+.advantages__kg {
+  opacity: 0;
 }
 
 .advantages__discription {
