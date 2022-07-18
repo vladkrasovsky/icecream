@@ -165,6 +165,10 @@
 
   &__link {
     color: $color-text-light;
+    &:hover,
+    &:focus {
+      color: $bg-customer-reviews-house;
+    }
   }
 }
 
