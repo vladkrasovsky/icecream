@@ -3,33 +3,48 @@
   padding-top: $padding-section;
 
   background-color: $color-secondary-lighter;
+  position: relative;
 
-  @include mq(mobile-only) {
-    background-image: url(../images/about/milk-bg-mob.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0 594px;
-    @include mq(retina) {
-      background-image: url(../images/about/milk-bg-mob@2x.png);
-    }
-  }
-  @include mq(tablet) {
-    padding-bottom: calc($padding-section / 2);
-  }
-  @include mq(desktop) {
+  &::before {
+    content: '';
+
+    content: '';
+    position: absolute;
+    top: 236px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
     background-image: url(../images/about/milk-bg-desk.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 236px;
-
-    @include mq(retina) {
-      background-image: url(../images/about/milk-bg-desk@2x.png);
-    }
-  }
-
-  @media screen and (min-width: 1680px) {
     background-size: cover;
   }
+  // @include mq(mobile-only) {
+  //   background-image: url(../images/about/milk-bg-mob.png);
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   background-position: 0 594px;
+  //   @include mq(retina) {
+  //     background-image: url(../images/about/milk-bg-mob@2x.png);
+  //   }
+  // }
+  // @include mq(tablet) {
+  //   padding-bottom: calc($padding-section / 2);
+  // }
+  // @include mq(desktop) {
+  //   background-image: url(../images/about/milk-bg-desk.png);
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   background-position: 50% 236px;
+
+  //   @include mq(retina) {
+  //     background-image: url(../images/about/milk-bg-desk@2x.png);
+  //   }
+  // }
+
+  // @media screen and (min-width: 1680px) {
+  //   background-size: cover;
+  // }
 }
 
 .about__container {
