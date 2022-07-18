@@ -1,0 +1,2 @@
+$(document).ready((function(){var o=!0,t=".advantages__list";$(window).on("scroll load resize",(function(){if(!o)return!1;var n=$(window).scrollTop(),e=$(t).offset().top,i=$(window).height(),s=$(document).height(),a=$(t).outerHeight();(n+500>=e||i+n==s||a+e<i)&&($(".js-count").css("opacity","1"),$(".js-kg").css("opacity","1"),$(".js-count").spincrement({thousandSeparator:"",duration:1200}),o=!1)}))}));
+//# sourceMappingURL=index.45980d77.js.map
