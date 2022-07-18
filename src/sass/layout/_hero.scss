@@ -422,10 +422,10 @@ $text-content-z: 2;
 }
 @keyframes slideCenter {
   0% {
-    transform: translateZ(0) scale(0);
+    transform: scale(0);
   }
   100% {
-    transform: translateZ(100%) scale(1);
+    transform: scale(1);
   }
 }
 
