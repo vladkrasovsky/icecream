@@ -26,8 +26,11 @@
         </ul>
       </div>
       <div
-        class="hero-content__circle hero-content__circle--top slideCenter"
-      ></div>
+        class="hero-content__circle hero-content__circle--top slideCenter wrapper"
+      >
+        <div class="circle-container"></div>
+        <div class="circle"></div>
+      </div>
       <img
         class="hero-content__icon fadeBottom"
         srcset="
@@ -67,11 +70,9 @@
             type="button"
             data-hidden-text-toggler
           >
-            <img
-              class="slider-hidden__icon"
-              src="./images/hero/arrow-right-desk.png"
-              alt="Arrow Button"
-            />
+            <svg height="12" width="12">
+              <use href="./images/icons.svg#arrow-right-02"></use>
+            </svg>
           </button>
           <p class="slider-hidden__text">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit
