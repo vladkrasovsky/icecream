@@ -4,9 +4,30 @@ $text-content-z: 2;
 
 .hero {
   background-color: $color-secondary-light;
-  overflow-x: hidden;
+  overflow: hidden;
   @include mq(desktop) {
     padding-top: $padding-section;
+
+    background: linear-gradient(
+        45deg,
+        rgb(255, 184, 202),
+        rgba(252, 168, 189, 0.7),
+        rgba(250, 139, 167, 0.7),
+        rgba(250, 199, 212, 0.7)
+      )
+      0 0 / 1000% no-repeat;
+    animation: gradientAnimation 30s ease infinite;
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 30%, 0 0;
+    }
+    50% {
+      background-position: 100% 70%, 0 0;
+    }
+    100% {
+      background-position: 0% 30%, 0 0;
+    }
   }
   &__container {
     position: relative;
@@ -209,15 +230,26 @@ $text-content-z: 2;
 .slider-hidden {
   position: relative;
   &__button {
-    display: inline-flex;
-    padding: 0;
-    background: none;
+    padding: 5px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    border-color: transparent;
-    overflow: hidden;
     cursor: pointer;
+    color: $color-accent;
+    fill: $color-accent;
+    background-color: $bg-button-secondary;
+    border-color: transparent;
 
     transform: translateX(0) rotateY(0);
+
+    @include mq(desktop) {
+      padding: 8px;
+      width: 26px;
+      height: 26px;
+    }
   }
   &__button-transition {
     transform: scale(1);
@@ -238,14 +270,7 @@ $text-content-z: 2;
       }
     }
   }
-  &__icon {
-    width: 18px;
-    height: 18px;
-    @include mq(desktop) {
-      width: 26px;
-      height: 26px;
-    }
-  }
+
   &__text {
     position: absolute;
     top: -4px;
@@ -336,7 +361,7 @@ $text-content-z: 2;
 .fadeLeft {
   @include mq(desktop) {
     animation-name: fadeLeft;
-    animation-duration: 1s;
+    animation-duration: 1500ms;
     animation-fill-mode: both;
   }
 }
@@ -353,8 +378,9 @@ $text-content-z: 2;
 .fadeRight {
   @include mq(desktop) {
     animation-name: fadeRight;
-    animation-duration: 1s;
+    animation-duration: 1800ms;
     animation-fill-mode: both;
+    animation-delay: 400ms;
   }
 }
 @keyframes fadeRight {
@@ -370,8 +396,9 @@ $text-content-z: 2;
 .fadeBottom {
   @include mq(desktop) {
     animation-name: fadeBottom;
-    animation-duration: 1s;
+    animation-duration: 1500ms;
     animation-fill-mode: both;
+    animation-delay: 250ms;
   }
 }
 @keyframes fadeBottom {
@@ -387,7 +414,7 @@ $text-content-z: 2;
 .slideCenter {
   @include mq(desktop) {
     animation-name: slideCenter;
-    animation-duration: 1s;
+    animation-duration: 1500ms;
     animation-fill-mode: both;
   }
 }
@@ -397,5 +424,44 @@ $text-content-z: 2;
   }
   100% {
     transform: translateZ(100%) scale(1);
+  }
+}
+
+.circle-container {
+  @include mq(desktop) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    transform-origin: left center;
+    .circle {
+      position: absolute;
+      border-radius: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      left: 0;
+      opacity: 0;
+      animation-name: move;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+    }
+  }
+  @keyframes move {
+    0% {
+      transform: translateX(0px);
+      opacity: 0;
+    }
+
+    1% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: translateX(70vmin);
+      opacity: 0;
+    }
   }
 }
