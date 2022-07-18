@@ -45,6 +45,11 @@
 
 .gallery__pic {
   display: block;
+  transition: transform $transition-duration $transition-animation;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   & + & {
     margin-top: 2px;
