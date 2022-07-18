@@ -55,6 +55,7 @@
 }
 
 .advantages__title {
+  display: flex;
   margin-bottom: 4px;
   @include font(36px, 1.14, 400, 0.04em);
   font-family: $font-stack-secondary;
@@ -70,6 +71,10 @@
     margin-bottom: 16px;
     font-size: 58px;
   }
+}
+.advantages__title--after::after {
+  display: block;
+  content: 'kg';
 }
 
 .advantages__discription {
