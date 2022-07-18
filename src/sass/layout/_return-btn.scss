@@ -1,0 +1,69 @@
+
+
+
+.return-button {
+    position: fixed;
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+  
+      &:hover,
+      &:focus {
+        .return-button__icon {
+          fill: $color-secondary-darker;
+        }
+      }
+    }
+    &__icon {
+      transition-property: fill;
+      transition-duration: $transition-duration;
+      transition-timing-function: $transition-animation;
+      transform: rotate(-90deg);
+      fill: $color-accent;
+    }
+  }
+  @include mq(mobile-only) {
+    .return-button {
+      width: 25px;
+      height: 25px;
+      bottom: 15px;
+      right: 15px;
+    }
+    .return-button__icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  @include mq(tablet) {
+    .return-button {
+      width: 35px;
+      height: 35px;
+      bottom: 17px;
+      right: 15px;
+    }
+    .return-button__icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @include mq(desktop) {
+    .return-button {
+      width: 45px;
+      height: 45px;
+      bottom: 25px;
+      right: 15px;
+    }
+    .return-button__icon {
+      width: 45px;
+      height: 45px;
+    }
+  }
