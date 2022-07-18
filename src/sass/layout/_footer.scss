@@ -91,6 +91,7 @@
 }
 
 .footer__link {
+  position: relative;
   display: block;
   width: 32px;
   height: 32px;
@@ -105,8 +106,46 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     fill: $color-accent;
+    &::before,
+    &::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $color-accent;
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+    transform: translateX(-50%) translateY(-50%) scale(0.2);
+  }
+
+  &::after {
+    width: 65px;
+    height: 65px;
+    border-width: 4px;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+  }
+}
+
+.footer__icon {
+  width: 32px;
+  height: 32px;
+
+  @include mq(desktop) {
+    width: 34px;
+    height: 34px;
   }
 }
 

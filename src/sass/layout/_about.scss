@@ -13,28 +13,54 @@
       background-image: url(../images/about/milk-bg-mob@2x.png);
     }
   }
-  @include mq(tablet) {
-    padding-bottom: calc($padding-section / 2);
-  }
-  @include mq(desktop) {
-    background-image: url(../images/about/milk-bg-desk.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 236px;
 
-    @include mq(retina) {
-      background-image: url(../images/about/milk-bg-desk@2x.png);
+  @include mq(desktop) {
+    position: relative;
+  }
+
+  &::before,
+  &::after {
+    @include mq(desktop) {
+      content: '';
+      position: absolute;
+      top: 236px;
+      bottom: 0;
+
+      pointer-events: none;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      background-image: url(../images/about/milk-bg-desk.png);
+      @include mq(retina) {
+        background-image: url(../images/about/milk-bg-desk@2x.png);
+      }
     }
   }
 
-  @media screen and (min-width: 1680px) {
-    background-size: cover;
+  &::before {
+    @include mq(desktop) {
+      left: 0;
+      width: 155px;
+      background-position: left;
+    }
+  }
+
+  &::after {
+    @include mq(desktop) {
+      right: 0;
+      width: 255px;
+      background-position: right;
+    }
   }
 }
 
 .about__container {
   @include mq(mobile-only) {
     max-width: 480px;
+  }
+  @include mq(desktop) {
+    position: relative;
+    z-index: 1;
   }
 }
 
