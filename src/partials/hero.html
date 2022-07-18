@@ -12,22 +12,24 @@
           <li class="hero-content__item">
             <a
               href="#our_products"
-              class="hero-content__btn hero-content__btn--colored"
+              class="hero-content__btn hero-content__btn--colored js-scroll"
               ><span class="btn__text">Products</span></a
             >
           </li>
           <li class="hero-content__item">
             <a
               href="#how_it_is_made"
-              class="hero-content__btn hero-content__btn--uncolored"
+              class="hero-content__btn hero-content__btn--uncolored js-scroll"
               ><span class="btn__text">How it’s made?</span></a
             >
           </li>
         </ul>
       </div>
-      <div class="hero-content__circle hero-content__circle--top"></div>
+      <div
+        class="hero-content__circle hero-content__circle--top slideCenter"
+      ></div>
       <img
-        class="hero-content__icon"
+        class="hero-content__icon fadeBottom"
         srcset="
           ./images/hero/icecream-mob.png     171w,
           ./images/hero/icecream-mob@2x.png  342w,
@@ -43,7 +45,7 @@
     </div>
     <div class="hero-other">
       <img
-        class="hero-other__carafe"
+        class="hero-other__carafe fadeLeft"
         srcset="
           ./images/hero/milk-tab.png     152w,
           ./images/hero/milk-tab@2x.png  304w,
@@ -60,16 +62,20 @@
           eiusmod tempor incididunt ut labore et
         </p>
         <div class="slider-hidden">
-          <button class="slider-hidden__button" type="button">
+          <button
+            class="slider-hidden__button slider-hidden__button-transition"
+            type="button"
+            data-hidden-text-toggler
+          >
             <img
               class="slider-hidden__icon"
               src="./images/hero/arrow-right-desk.png"
               alt="Arrow Button"
             />
           </button>
-          <!-- <p class="slider-hidden__text">
+          <p class="slider-hidden__text">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit
-          </p> -->
+          </p>
         </div>
       </div>
       <ul class="achiv">
@@ -83,7 +89,7 @@
         </li>
       </ul>
       <img
-        class="hero-other__tasty"
+        class="hero-other__tasty fadeRight"
         srcset="
           ./images/hero/sotasty-tab.png     190w,
           ./images/hero/sotasty-tab@2x.png  380w,

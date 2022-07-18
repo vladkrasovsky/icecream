@@ -36,6 +36,7 @@ $text-content-z: 2;
     max-width: 218px;
     margin-bottom: 20px;
     line-height: 1.145;
+
     @include mq(tablet) {
       max-width: 173px;
       font-size: 22px;
@@ -129,7 +130,7 @@ $text-content-z: 2;
       height: 344px;
 
       bottom: 75px;
-      right: -62px; //-36 - 26, де 26 це 346-320
+      right: -62px;
     }
     @include mq(tablet) {
       bottom: 40px;
@@ -174,6 +175,9 @@ $text-content-z: 2;
     position: absolute;
     bottom: 0;
     right: 32px;
+    @include mq(desktop) {
+      right: 16px;
+    }
   }
 }
 
@@ -212,6 +216,27 @@ $text-content-z: 2;
     border-color: transparent;
     overflow: hidden;
     cursor: pointer;
+
+    transform: translateX(0) rotateY(0);
+  }
+  &__button-transition {
+    transform: scale(1);
+    transition-property: box-shadow, transform;
+    transition-duration: 500ms;
+    transition-timing-function: $transition-animation;
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      box-shadow: -5px 0px 7px rgba(212, 20, 67, 0.25);
+    }
+    &.is-open {
+      @include mq(tablet) {
+        transform: translateX(115px) rotateY(180deg) scale(1.2);
+      }
+      @include mq(desktop) {
+        transform: translateX(200px) rotateY(180deg) scale(1.2);
+      }
+    }
   }
   &__icon {
     width: 18px;
@@ -219,6 +244,27 @@ $text-content-z: 2;
     @include mq(desktop) {
       width: 26px;
       height: 26px;
+    }
+  }
+  &__text {
+    position: absolute;
+    top: -4px;
+    max-width: 114px;
+    font-size: 8px;
+    line-height: 1.5;
+    pointer-events: none;
+    color: $color-text-lighter;
+
+    opacity: 0;
+    transition: opacity 500ms $transition-animation;
+    @include mq(desktop) {
+      max-width: 200px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .slider-hidden__button-transition.is-open + & {
+      opacity: 1;
+      pointer-events: all;
     }
   }
 }
@@ -284,5 +330,72 @@ $text-content-z: 2;
         right: -18px;
       }
     }
+  }
+}
+
+.fadeLeft {
+  @include mq(desktop) {
+    animation-name: fadeLeft;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+}
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeRight {
+  @include mq(desktop) {
+    animation-name: fadeRight;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+}
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeBottom {
+  @include mq(desktop) {
+    animation-name: fadeBottom;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+}
+@keyframes fadeBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.slideCenter {
+  @include mq(desktop) {
+    animation-name: slideCenter;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+}
+@keyframes slideCenter {
+  0% {
+    transform: translateZ(0) scale(0);
+  }
+  100% {
+    transform: translateZ(100%) scale(1);
   }
 }
