@@ -1,0 +1,32 @@
+.scroll-to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $color-accent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $color-secondary-lighter;
+
+    &:active,
+    &:hover,
+    &:focus {
+        background-color: $color-secondary-darker;
+        color: $color-accent;
+        transition-property: background-color, color;
+        transition-duration: $transition-duration;
+        transition-timing-function: $transition-animation;
+    }
+}
+.scroll-to-top__icon {
+    display: block;
+    fill:currentColor; 
+    transform: rotate(-90deg);
+}
