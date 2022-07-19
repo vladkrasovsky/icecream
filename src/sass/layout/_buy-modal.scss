@@ -1,0 +1,264 @@
+.modal {
+  z-index: 999;
+  @include mq(mobile) {
+    width: 90vw;
+  }
+  &__cross {
+    color: $color-secondary-light;
+    fill: currentColor;
+    transition: fill $transition-duration $transition-animation;
+    &:hover,
+    &:focus {
+      fill: $color-accent;
+    }
+  }
+}
+
+// Form modal
+.form {
+  opacity: 0;
+
+  animation-name: formAnimate;
+  animation-duration: 1000ms;
+  animation-timing-function: $transition-animation;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes formAnimate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.form {
+  height: 100%;
+  padding: 0;
+  text-align: center;
+
+  &__title {
+    display: block;
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(30 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $color-text;
+
+    @include mq(desktop) {
+      line-height: calc(23 / 20);
+    }
+  }
+
+  &__env {
+    margin-bottom: 10px;
+    &--checkbox {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 4px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: $color-text;
+
+    &--checkbox {
+      width: 100%;
+    }
+  }
+
+  &__thumb {
+    display: flex;
+    position: relative;
+  }
+
+  &__text {
+    margin-bottom: 4px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.03em;
+    color: $color-text-light;
+
+    @include mq(desktop) {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    color: $color-text;
+    border: 1px solid $color-border-secondary;
+    border-radius: 4px;
+
+    transition: border $transition-duration $transition-animation;
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      border-color: $color-accent;
+    }
+    &--checkbox {
+      width: 16px;
+      height: 16px;
+      transform: translateX(20px);
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+
+    color: $color-secondary-darker;
+    transition: color $transition-duration $transition-animation;
+
+    .form__label--checkbox:focus-within &,
+    .form__label--checkbox:hover & {
+      color: $color-accent;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+
+    border: 1px solid $color-border-secondary;
+    border-radius: 4px;
+    transition: border $transition-duration $transition-animation;
+
+    .form__env--txt:focus-within &,
+    .form__env--txt:hover & {
+      border-color: $color-accent;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-border-secondary;
+    fill: currentColor;
+    transition: fill $transition-duration $transition-animation;
+
+    .form__input:hover + &,
+    .form__input:focus + & {
+      fill: $color-accent;
+    }
+  }
+  &__text {
+    margin-right: 0;
+    opacity: 0.6;
+    transition: opacity $transition-duration $transition-animation;
+    .form__env--checkbox:focus-within &,
+    .form__env--checkbox:hover & {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  &__link {
+    outline: 0;
+    outline-offset: 0;
+    text-decoration-line: underline;
+    color: $color-accent;
+    margin-left: 4px;
+  }
+
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 55px;
+    padding-right: 55px;
+    opacity: 0.6;
+    transition: opacity $transition-duration $transition-animation;
+    box-shadow: none;
+    &:hover,
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+      opacity: 1;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+    }
+  }
+}
+.form__env--checkbox {
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+.form__input--checkbox {
+  appearance: none;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.form__icon--checkbox {
+  width: 16px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-size: contain;
+  background-origin: content-box;
+  transition: background-color $transition-duration $transition-animation,
+    background-image $transition-duration $transition-animation;
+  .form__env--checkbox:hover &,
+  .form__env--checkbox:focus & {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z' fill='%23d41443'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    cursor: pointer;
+  }
+  .form__input--checkbox:checked ~ & {
+    background-color: $color-accent;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m2.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z' fill='%23fff' stroke='%23fff' stroke-width='.2'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: contain;
+    border-radius: 2px;
+  }
+}

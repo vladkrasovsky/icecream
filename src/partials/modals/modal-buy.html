@@ -10,5 +10,98 @@
       d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
     />
   </svg>
-  <p class="modal__title">Заголовок окна 1</p>
+  <!-- <p class="modal__title">Заголовок окна 1</p> -->
+
+  <!-- Buy Modal Form -->
+
+  <form action="javascript:void(0);" class="form modal__form">
+    <b class="form__title"
+      >Please inform us about yourself, <br />
+      we will contact you soon</b
+    >
+
+    <div class="form__env">
+      <label for="name" class="form__label">Name</label>
+      <div class="form__thumb">
+        <input
+          class="form__input"
+          type="text"
+          name="name"
+          required
+          placeholder="Neo Anderson"
+          autocomplete="off"
+          autofocus
+          id="name"
+        />
+        <svg class="form__icon" width="18">
+          <use href="/src/images/icons.svg#icon-person-black-18dp"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="form__env">
+      <label for="phone" class="form__label">Phone</label>
+      <div class="form__thumb">
+        <input
+          class="form__input"
+          type="tel"
+          name="phone"
+          placeholder="+1 418 7777777"
+          autocomplete="off"
+          id="phone"
+        />
+        <svg class="form__icon" width="18">
+          <use href="/src/images/icons.svg#icon-phone-black-18dp"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="form__env">
+      <label for="email" class="form__label">e-Mail</label>
+      <div class="form__thumb">
+        <input
+          class="form__input"
+          type="email"
+          name="email"
+          required
+          placeholder="matrix@wb.com"
+          autocomplete="off"
+          id="email"
+        />
+        <svg class="form__icon" width="18">
+          <use href="/src/images/icons.svg#icon-email-black-18dp"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="form__env form__env--txt">
+      <label for="textarea" class="form__label">Feedback</label>
+      <textarea
+        class="form__textarea"
+        name="feedback"
+        placeholder="Type here"
+        id="textarea"
+      ></textarea>
+    </div>
+
+    <div class="form__env form__env--checkbox">
+      <input
+        class="form__input form__input--checkbox"
+        type="checkbox"
+        name="usr-agr"
+        required
+        value="agr"
+        id="agreement"
+      />
+      <span class="form__icon form__icon--checkbox"></span>
+      <label for="agreement" class="form__label--checkbox">
+        <span class="form__text form__text--checkbox"
+          >I agree with e-mailing
+          <a class="form__link" href="">Agreement</a>
+        </span>
+      </label>
+    </div>
+
+    <button class="button form__button btn" type="submit">Submit</button>
+  </form>
 </div>
