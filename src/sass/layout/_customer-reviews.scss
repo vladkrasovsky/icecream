@@ -108,6 +108,8 @@
   width: 54px;
   height: 40px;
   fill: $color-border;
+  transition: $transition-duration $transition-animation;
+  transition-property: transform;
 
   @include mq(tablet) {
     top: 20px;
@@ -121,6 +123,13 @@
   @include mq(desktop) {
     top: 30px;
     left: 80px;
+  }
+
+  .customer-reiews__quote:hover & {
+    transform: translateY(-50px);
+    @include mq(tablet-only) {
+      transform: translateY(-40px);
+    }
   }
 }
 
@@ -169,7 +178,41 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  .slick-switchers-item--active & {
+  .slick-switchers-item--active &,
+  .slick-active button:before {
     background-image: url(../images/svg/house.svg);
   }
+}
+
+// Slick overrides
+.slick-dots {
+  bottom: -40px;
+}
+
+.slick-dots li,
+.slick-dots li button,
+.slick-dots li button:before {
+  height: 13px;
+  width: 13px;
+}
+
+.slick-dots li {
+  margin: 0 9px;
+}
+
+.slick-dots li button:before {
+  font-size: 13px;
+  background-color: $bg-customer-markers;
+  border-radius: 50%;
+  opacity: 1;
+  content: '';
+}
+.slick-dots li.slick-active button:before {
+  background-color: transparent;
+  border-radius: 0;
+  opacity: 1;
+  background-image: url(../images/svg/house.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
