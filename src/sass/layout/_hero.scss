@@ -4,9 +4,30 @@ $text-content-z: 2;
 
 .hero {
   background-color: $color-secondary-light;
-  overflow-x: hidden;
+  overflow: hidden;
   @include mq(desktop) {
     padding-top: $padding-section;
+
+    background: linear-gradient(
+        45deg,
+        rgb(255, 184, 202),
+        rgba(252, 168, 189, 0.7),
+        rgba(250, 139, 167, 0.7),
+        rgba(250, 199, 212, 0.7)
+      )
+      0 0 / 1000% no-repeat;
+    animation: gradientAnimation 30s ease infinite;
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 30%, 0 0;
+    }
+    50% {
+      background-position: 100% 70%, 0 0;
+    }
+    100% {
+      background-position: 0% 30%, 0 0;
+    }
   }
   &__container {
     position: relative;
@@ -36,6 +57,7 @@ $text-content-z: 2;
     max-width: 218px;
     margin-bottom: 20px;
     line-height: 1.145;
+
     @include mq(tablet) {
       max-width: 173px;
       font-size: 22px;
@@ -129,7 +151,7 @@ $text-content-z: 2;
       height: 344px;
 
       bottom: 75px;
-      right: -62px; //-36 - 26, де 26 це 346-320
+      right: -62px;
     }
     @include mq(tablet) {
       bottom: 40px;
@@ -174,6 +196,9 @@ $text-content-z: 2;
     position: absolute;
     bottom: 0;
     right: 32px;
+    @include mq(desktop) {
+      right: 16px;
+    }
   }
 }
 
@@ -205,20 +230,66 @@ $text-content-z: 2;
 .slider-hidden {
   position: relative;
   &__button {
-    display: inline-flex;
-    padding: 0;
-    background: none;
-    border-radius: 50%;
-    border-color: transparent;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  &__icon {
+    padding: 5px;
     width: 18px;
     height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    color: $color-accent;
+    fill: $color-accent;
+    background-color: $bg-button-secondary;
+    border-color: transparent;
+
+    transform: translateX(0) rotateY(0);
+
     @include mq(desktop) {
+      padding: 8px;
       width: 26px;
       height: 26px;
+    }
+  }
+  &__button-transition {
+    transform: scale(1);
+    transition-property: box-shadow, transform;
+    transition-duration: 500ms;
+    transition-timing-function: $transition-animation;
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      box-shadow: -5px 0px 7px rgba(212, 20, 67, 0.25);
+    }
+    &.is-open {
+      @include mq(tablet) {
+        transform: translateX(115px) rotateY(180deg) scale(1.2);
+      }
+      @include mq(desktop) {
+        transform: translateX(200px) rotateY(180deg) scale(1.2);
+      }
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: -4px;
+    max-width: 114px;
+    font-size: 8px;
+    line-height: 1.5;
+    pointer-events: none;
+    color: $color-text-lighter;
+
+    opacity: 0;
+    transition: opacity 500ms $transition-animation;
+    @include mq(desktop) {
+      max-width: 200px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .slider-hidden__button-transition.is-open + & {
+      opacity: 1;
+      pointer-events: all;
     }
   }
 }
@@ -283,6 +354,116 @@ $text-content-z: 2;
         height: 30px;
         right: -18px;
       }
+    }
+  }
+}
+
+.fadeLeft {
+  @include mq(desktop) {
+    animation-name: fadeLeft;
+    animation-duration: 1500ms;
+    animation-delay: 50ms;
+    animation-fill-mode: both;
+  }
+}
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeRight {
+  @include mq(desktop) {
+    animation-name: fadeRight;
+    animation-duration: 1500ms;
+    animation-fill-mode: both;
+    animation-delay: 720ms;
+  }
+}
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeBottom {
+  @include mq(desktop) {
+    animation-name: fadeBottom;
+    animation-duration: 1500ms;
+    animation-fill-mode: both;
+    animation-delay: 100ms;
+  }
+}
+@keyframes fadeBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.slideCenter {
+  @include mq(desktop) {
+    animation-name: slideCenter;
+    animation-duration: 1700ms;
+    animation-fill-mode: both;
+    animation-delay: 700ms;
+  }
+}
+@keyframes slideCenter {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.circle-container {
+  @include mq(desktop) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    transform-origin: left center;
+    .circle {
+      position: absolute;
+      border-radius: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      left: 0;
+      opacity: 0;
+      animation-name: move;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+    }
+  }
+  @keyframes move {
+    0% {
+      transform: translateX(0px);
+      opacity: 0;
+    }
+
+    1% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: translateX(70vmin);
+      opacity: 0;
     }
   }
 }
