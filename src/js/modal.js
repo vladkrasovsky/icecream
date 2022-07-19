@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay = document.querySelector('.js-overlay-modal'),
     closeButtons = document.querySelectorAll('.js-modal-close');
 
+  const mobileMenu = document.querySelector('.js-menu-container');
+  const openMenuBtn = document.querySelector('.js-open-menu');
+
   /* Перебираем массив кнопок */
   modalButtons.forEach(function (item) {
     /* Назначаем каждой кнопке обработчик клика */
@@ -40,6 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
             люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
             Нужно подстраховаться. */
       e.preventDefault();
+
+      // Close the mobile menu
+      mobileMenu.classList.remove('is-open');
+      overlay.classList.remove('active');
+      openMenuBtn.setAttribute('aria-expanded', false);
+      bodyScrollLock.enableBodyScroll(document.body);
 
       /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
             и будем искать модальное окно с таким же атрибутом. */
@@ -52,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
             подложке и окну чтобы показать их. */
       modalElem.classList.add('active');
       overlay.classList.add('active');
+      bodyScrollLock.disableBodyScroll(document.body);
     }); // end click
   }); // end foreach
 
@@ -61,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
+      bodyScrollLock.enableBodyScroll(document.body);
     });
   }); // end foreach
 
@@ -70,16 +81,24 @@ document.addEventListener('DOMContentLoaded', function () {
       var key = e.keyCode;
 
       if (key == 27) {
+        if (!document.querySelector('.modal.active')) return;
         document.querySelector('.modal.active').classList.remove('active');
         document.querySelector('.overlay').classList.remove('active');
+        bodyScrollLock.enableBodyScroll(document.body);
       }
     },
     false
   );
 
   overlay.addEventListener('click', function () {
+    // Close the mobile menu
+    mobileMenu.classList.remove('is-open');
+    overlay.classList.remove('active');
+    openMenuBtn.setAttribute('aria-expanded', false);
+
     if (!document.querySelector('.modal.active')) return;
     document.querySelector('.modal.active').classList.remove('active');
     this.classList.remove('active');
+    bodyScrollLock.enableBodyScroll(document.body);
   });
 }); // end ready

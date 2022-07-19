@@ -1,6 +1,9 @@
 @import './common';
 
 // components section
+@import './components/forms/_form-field';
+@import './components/forms/input';
+@import './components/forms/checkbox';
 @import './components/grid';
 @import './components/logo';
 @import './components/nav';
@@ -12,6 +15,7 @@
 @import './components/mobile-menu';
 @import './components/cookies-popup';
 @import './components/scroll-to-top';
+@import './components/data-form';
 
 // layout section
 @import './layout/header';
@@ -23,4 +27,3 @@
 @import './layout/customer-reviews';
 @import './layout/contacts';
 @import './layout/footer';
-@import './layout/buy-modal';
