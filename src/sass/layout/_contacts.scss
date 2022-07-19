@@ -2,6 +2,8 @@
   padding-bottom: calc($padding-section / 3);
   padding-top: calc($padding-section / 2);
 
+  overflow-x: hidden;
+
   background-image: linear-gradient(
     to bottom,
     transparent 21.5%,
