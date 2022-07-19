@@ -45,12 +45,7 @@
 
 .gallery__pic {
   display: block;
-  transition: $transition-duration $transition-animation;
-  transition-property: transform, filter;
-
-  .gallery__list:hover &:not(:hover) {
-    filter: blur(3px);
-  }
+  transition: transform $transition-duration $transition-animation;
 
   &:hover {
     transform: scale(1.1);
