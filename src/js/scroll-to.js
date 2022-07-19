@@ -27,8 +27,18 @@
 
   const scrollTo = function () {
     const links = document.querySelectorAll('.js-scroll');
+    const mobileMenu = document.querySelector('.js-menu-container');
+    const openMenuBtn = document.querySelector('.js-open-menu');
+    const overlay = document.querySelector('.js-overlay-modal');
+
     links.forEach(each => {
       each.addEventListener('click', function () {
+        // Close the mobile menu
+        mobileMenu.classList.remove('is-open');
+        overlay.classList.remove('active');
+        openMenuBtn.setAttribute('aria-expanded', false);
+        bodyScrollLock.enableBodyScroll(document.body);
+
         const currentTarget = this.getAttribute('href');
         smoothScroll(currentTarget, 500);
       });

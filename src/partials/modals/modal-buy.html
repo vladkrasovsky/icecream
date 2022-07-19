@@ -1,14 +1,74 @@
-<!-- Buy Modal -->
 <div class="modal" data-modal="1">
-  <!--   Svg иконка для закрытия окна  -->
-  <svg
-    class="modal__cross js-modal-close"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-  >
-    <path
-      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
-    />
-  </svg>
-  <p class="modal__title">Заголовок окна 1</p>
+  <div class="modal__dialog">
+    <button
+      class="modal__close js-modal-close"
+      type="button"
+      aria-label="Close"
+    >
+      <svg width="30" height="30">
+        <use href="./images/icons.svg#close" />
+      </svg>
+    </button>
+
+    <p class="modal__title">
+      Please inform us about yourself, we will contact you soon
+    </p>
+
+    <form class="js-speaker-form data-form">
+      <label class="form-field">
+        <span class="form-field__name">Name</span>
+        <input class="input input--has-icon" name="name" type="text" required />
+        <svg class="form-field__icon" width="18" height="18">
+          <use href="./images/icons.svg#icon-person-black-18dp" />
+        </svg>
+      </label>
+
+      <label class="form-field">
+        <span class="form-field__name">Phone</span>
+        <input class="input input--has-icon" name="tel" type="tel" required />
+        <svg class="form-field__icon" width="18" height="18">
+          <use href="./images/icons.svg#icon-phone-black-18dp" />
+        </svg>
+      </label>
+
+      <label class="form-field">
+        <span class="form-field__name">Email</span>
+        <input
+          class="input input--has-icon"
+          name="email"
+          type="email"
+          required
+        />
+        <svg class="form-field__icon" width="18" height="18">
+          <use href="./images/icons.svg#icon-email-black-18dp" />
+        </svg>
+      </label>
+
+      <label class="form-field data-form__comment">
+        <span class="form-field__name">Comment</span>
+        <textarea
+          class="input input--textarea"
+          name="text"
+          placeholder="Enter text"
+        ></textarea>
+      </label>
+
+      <label class="form-field form-field--check data-form__accept">
+        <input
+          class="checkbox"
+          type="checkbox"
+          name="accept"
+          value="1"
+          required
+        />
+        <svg class="checkbox__icon" width="16" height="15">
+          <use class="checkbox__use" href="./images/icons.svg#icon-check" />
+        </svg>
+        I agree with the newsletter and accept
+        <a class="link modal__link" href="">Terms of an agreement</a>
+      </label>
+
+      <button class="btn btn--bold" type="submit">Submit</button>
+    </form>
+  </div>
 </div>

@@ -1,0 +1,12 @@
+// Data form
+
+.data-form__comment {
+  margin-bottom: 20px;
+}
+
+.data-form__accept {
+  font-size: 12px;
+  @include mq(tablet) {
+    font-size: 14px;
+  }
+}

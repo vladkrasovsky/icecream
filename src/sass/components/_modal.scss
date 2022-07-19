@@ -1,7 +1,4 @@
-/* Стили для подложки */
-
 .overlay {
-  /* Скрываем подложку  */
   opacity: 0;
   visibility: hidden;
 
@@ -15,34 +12,27 @@
   transition: 0.3s all;
 }
 
-/* Стили для модальных окон */
-
 .modal {
-  /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
 
-  /*  Установаем ширину окна  */
-  width: 100%;
-  max-width: 500px;
-
-  /*  Центрируем и задаем z-index */
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 30; /* Должен быть выше чем у подложки*/
+  left: 0 !important; // hotfix for safary 'inset' issue
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  display: flex;
+  height: 100%;
+
+  z-index: 30;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   /*  Побочные стили   */
-  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
-  text-align: center;
   padding: 30px;
-  border-radius: 3px;
-  background-color: #fff;
   transition: 0.3s all;
 }
-
-/* Стили для активных классов подложки и окна */
 
 .modal.active,
 .overlay.active {
@@ -50,14 +40,77 @@
   visibility: visible;
 }
 
-/* Стили для кнопки закрытия */
+.modal__dialog {
+  position: relative;
+  width: 450px;
+  max-width: 100%;
+  min-height: 580px;
 
-.modal__cross {
-  width: 15px;
-  height: 15px;
+  margin: auto;
+  padding: 30px;
+
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  @include mq(desktop) {
+    width: 528px;
+  }
+}
+
+.modal__close {
+  $size: 30px;
+
   position: absolute;
-  top: 20px;
-  right: 20px;
-  fill: #444;
+  top: calc($gap / 2);
+  right: calc($gap / 2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $size;
+  width: $size;
+
+  background-color: transparent;
+  border: none;
+
+  transition-property: fill, transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-animation;
+
   cursor: pointer;
+
+  &:hover {
+    fill: $color-accent;
+  }
+  &:focus {
+    transform: rotate(90deg);
+  }
+}
+
+.modal__title {
+  max-width: 330px;
+  margin: 0 auto 30px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.15;
+
+  color: $color-accent;
+
+  @include mq(tablet) {
+    font-size: 20px;
+  }
+}
+
+.modal__link {
+  color: $color-accent;
+  text-decoration: underline;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    color: $color-accent-dark;
+  }
 }
