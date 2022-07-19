@@ -1,2 +1,0 @@
-document.querySelectorAll(".js-scroll").forEach((function(e){e.addEventListener("click",(function(){var e,t,o,n,r,l,c,i=this.getAttribute("href");e=i,t=500,o=document.querySelector(".scroll-to")?document.querySelector(".scroll-to").clientHeight:0,n=document.querySelector(e).getBoundingClientRect().top-o,r=window.pageYOffset,l=null,c=function(e){null===l&&(l=e);var o,i,u,s=e-l,a=(o=s,i=r,u=n,(o/=t/2)<1?u/2*o*o+i:-u/2*(--o*(o-2)-1)+i);window.scrollTo(0,a),s<t&&requestAnimationFrame(c)},requestAnimationFrame(c)}))}));
-//# sourceMappingURL=index.4f3c8aed.js.map
