@@ -57,6 +57,16 @@
   @include mq(desktop) {
     width: 528px;
   }
+
+  .modal--map & {
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+
+    @include mq(desktop) {
+      width: 768px;
+    }
+  }
 }
 
 .modal__close {
@@ -81,11 +91,19 @@
 
   cursor: pointer;
 
+  .modal--map &:hover,
   &:hover {
     fill: $color-accent;
   }
   &:focus {
     transform: rotate(90deg);
+  }
+
+  .modal--map & {
+    top: calc($gap / 2);
+    right: $gap;
+    background-color: #2e312f;
+    fill: $color-text-lighter;
   }
 }
 
