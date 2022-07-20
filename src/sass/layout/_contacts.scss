@@ -198,6 +198,13 @@
 
   &__link {
     color: $color-text-light;
+    transition: $transition-duration $transition-animation;
+    transition-property: color;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
   }
 }
 
