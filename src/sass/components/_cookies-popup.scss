@@ -1,6 +1,6 @@
 .cookies-popup {
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   left: calc($gap / 2);
   bottom: calc($gap / 2);
   transform: translateX(-120%) scale(0.8);
