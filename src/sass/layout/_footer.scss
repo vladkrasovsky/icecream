@@ -1,6 +1,7 @@
 .footer {
   padding-top: calc($padding-section / 3);
   background-color: $color-secondary-lighter;
+  overflow-x: hidden;
 
   @include mq(desktop) {
     padding-top: $padding-section;

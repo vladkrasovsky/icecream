@@ -1,6 +1,7 @@
 .customer-reiews {
   padding-bottom: calc($padding-section / 2);
   padding-top: calc($padding-section / 2);
+  overflow-x: hidden;
 
   @include mq(tablet) {
     padding-bottom: calc($padding-section / 1.5);

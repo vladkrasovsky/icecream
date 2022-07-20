@@ -1,6 +1,7 @@
 .about {
   padding-bottom: calc($padding-section / 3);
   padding-top: $padding-section;
+  overflow-x: hidden;
 
   background-color: $color-secondary-lighter;
 
