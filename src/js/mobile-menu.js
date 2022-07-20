@@ -25,6 +25,7 @@
 
   function closeMenu() {
     if (window.innerWidth >= 1200) {
+      if (!document.querySelector('.mobilie-menu.is-open')) return;
       mobileMenu.classList.remove('is-open');
       overlay.classList.remove('active');
       openMenuBtn.setAttribute('aria-expanded', false);
