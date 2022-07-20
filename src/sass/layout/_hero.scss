@@ -8,27 +8,27 @@ $text-content-z: 2;
   @include mq(desktop) {
     padding-top: $padding-section;
 
-    background: linear-gradient(
-        45deg,
-        rgb(255, 184, 202),
-        rgba(252, 168, 189, 0.7),
-        rgba(250, 139, 167, 0.7),
-        rgba(250, 199, 212, 0.7)
-      )
-      0 0 / 1000% no-repeat;
-    animation: gradientAnimation 30s ease infinite;
+    // background: linear-gradient(
+    //     45deg,
+    //     rgb(255, 184, 202),
+    //     rgba(252, 168, 189, 0.7),
+    //     rgba(250, 139, 167, 0.7),
+    //     rgba(250, 199, 212, 0.7)
+    //   )
+    //   0 0 / 1000% no-repeat;
+    // animation: gradientAnimation 30s ease infinite;
   }
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 30%, 0 0;
-    }
-    50% {
-      background-position: 100% 70%, 0 0;
-    }
-    100% {
-      background-position: 0% 30%, 0 0;
-    }
-  }
+  // @keyframes gradientAnimation {
+  //   0% {
+  //     background-position: 0% 30%, 0 0;
+  //   }
+  //   50% {
+  //     background-position: 100% 70%, 0 0;
+  //   }
+  //   100% {
+  //     background-position: 0% 30%, 0 0;
+  //   }
+  // }
   &__container {
     position: relative;
     min-height: 502px;
